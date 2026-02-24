@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Gründer – Digitales Marketing für Immobilienmakler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ─── RESET & BASE ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #1c3d2c;
+  --green2:  #264d38;
+  --accent:  #2c6e49;
+  --gold:    #b8953f;
+  --text:    #111111;
+  --sub:     #555555;
+  --light:   #777777;
+  --border:  #e4e4e0;
+  --bg:      #f8f8f5;
+  --white:   #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--white);
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── PAGE SYSTEM ─── */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green);
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex; align-items: center; gap: 2rem;
+}
+
+.nav-links button, .nav-links a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--sub);
+  background: none; border: none;
+  cursor: pointer; text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-links button:hover, .nav-links a:hover { color: var(--text); }
+
+.nav-btn {
+  background: var(--green) !important;
+  color: var(--white) !important;
+  padding: 0.55rem 1.3rem;
+  border-radius: 6px !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+}
+.nav-btn:hover { background: var(--green2) !important; color: var(--white) !important; }
+
+/* ─── LAYOUT ─── */
+.pt { padding-top: 68px; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 5%; }
+.sec { padding: 80px 0; }
+.sec-lg { padding: 100px 0; }
+
+/* ─── TYPOGRAPHY ─── */
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+h1, h2, h3 { color: var(--text); font-weight: 700; }
+
+.h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.h3 {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 1.08rem;
+  color: var(--sub);
+  line-height: 1.75;
+  max-width: 58ch;
+}
+
+p { color: var(--sub); }
+
+/* ─── BUTTONS ─── */
+.btn-primary {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--green2); }
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.78rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-secondary:hover { border-color: #aaa; color: var(--text); }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 90px 0 80px;
+  background: var(--white);
+}
+
+.hero-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.hero-content .label { margin-bottom: 20px; }
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+.hero-content .lead { margin-bottom: 36px; max-width: 46ch; }
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.hero-right { display: flex; flex-direction: column; gap: 16px; }
+
+.stat-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 32px;
+}
+
+.stat-box .stat-num {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-box .stat-label {
+  font-size: 0.85rem;
+  color: var(--light);
+  font-weight: 400;
+}
+
+.stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ─── DIVIDER ─── */
+hr { border: none; border-top: 1px solid var(--border); }
+
+/* ─── LEISTUNGEN ─── */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 48px 44px;
+}
+
+.service-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 14px;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--sub);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service-list li {
+  font-size: 0.88rem;
+  color: var(--sub);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.service-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+/* ─── NUMBERS / STATS BAR ─── */
+.stats-bar {
+  background: var(--green);
+  padding: 56px 0;
+}
+
+.stats-bar-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.stats-bar-item {
+  padding: 0 32px;
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+.stats-bar-item:first-child { padding-left: 0; }
+.stats-bar-item:last-child { border-right: none; }
+
+.stats-bar-item .num {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stats-bar-item .desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.45;
+}
+
+/* ─── HOW IT WORKS ─── */
+.steps {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.step-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.step-row:last-child { border-bottom: none; }
+.step-row:hover { background: var(--bg); }
+
+.step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--light);
+  letter-spacing: 0.05em;
+}
+
+.step-content {
+  padding: 28px 36px;
+}
+
+.step-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.step-content p {
+  font-size: 0.9rem;
+  color: var(--sub);
+  line-height: 1.7;
+  max-width: 68ch;
+}
+
+/* ─── FOR WHOM ─── */
+.for-whom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 0;
+}
+
+.criteria-list {
+  list-style: none;
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.criteria-list li {
+  font-size: 0.93rem;
+  color: var(--sub);
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.criteria-list li:last-child { border-bottom: none; }
+
+.criteria-list li::before {
+  content: '';
+  display: block;
+  width: 8px; height: 8px;
+  min-width: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.for-whom-visual {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.big-num {
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.big-num-label {
+  font-size: 0.8rem;
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 8px;
+}
+
+.for-whom-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px auto;
+}
+
+/* ─── CTA SECTION ─── */
+.cta-section {
+  background: var(--bg);
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cta-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.cta-inner h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  max-width: 46ch;
+}
+
+/* ─── CONTACT ─── */
+.contact-section { padding: 80px 0; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  margin-top: 48px;
+}
+
+.contact-info-text {
+  font-size: 0.97rem;
+  color: var(--sub);
+  line-height: 1.78;
+  margin-bottom: 32px;
+}
+
+.info-item {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+.info-item:last-child { border-bottom: 1px solid var(--border); }
+.info-item .lbl { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--light); margin-bottom: 4px; font-weight: 500; }
+.info-item .val { font-size: 1rem; font-weight: 600; color: var(--text); }
+
+/* form */
+.f-group { margin-bottom: 16px; }
+.f-group label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--sub); margin-bottom: 6px; }
+.f-group input, .f-group select, .f-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  background: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+  -webkit-appearance: none;
+}
+.f-group input:focus, .f-group select:focus, .f-group textarea:focus { border-color: var(--accent); }
+.f-group textarea { resize: vertical; min-height: 90px; }
+.f-hint { font-size: 0.78rem; color: var(--light); margin-top: 10px; text-align: center; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--text);
+  padding: 32px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.f-logo { font-size: 0.92rem; font-weight: 700; color: rgba(255,255,255,0.6); }
+.f-links { display: flex; gap: 1.8rem; }
+.f-links a { font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.15s; }
+.f-links a:hover { color: rgba(255,255,255,0.6); }
+.f-copy { font-size: 0.78rem; color: rgba(255,255,255,0.22); }
+
+/* ══════════════════════════════════
+   CASE STUDY
+══════════════════════════════════ */
+.case-hero { background: var(--green); padding: 90px 0 64px; }
+.case-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 5%; }
+.case-tag { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+.case-hero h1 { font-size: clamp(2rem, 3.5vw, 3rem); color: var(--white); font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 20px; }
+.case-hero .lead { color: rgba(255,255,255,0.5); max-width: 54ch; }
+
+.kpi-strip {
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+.kpi-strip-inner {
+  max-width: 1060px; margin: 0 auto; padding: 0 5%;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+}
+.kpi-item {
+  padding: 32px 24px;
+  border-right: 1px solid var(--border);
+}
+.kpi-item:last-child { border-right: none; }
+.kpi-num { font-size: 2rem; font-weight: 700; color: var(--green); letter-spacing: -0.03em; line-height: 1; }
+.kpi-lbl { font-size: 0.8rem; color: var(--light); margin-top: 5px; line-height: 1.45; }
+
+.case-body { max-width: 740px; margin: 0 auto; padding: 64px 5% 80px; }
+.case-body h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.015em; margin: 48px 0 14px; color: var(--text); }
+.case-body p { font-size: 0.97rem; color: var(--sub); line-height: 1.85; margin-bottom: 16px; }
+
+.pull {
+  border-left: 3px solid var(--gold);
+  padding: 18px 24px;
+  margin: 32px 0;
+  background: var(--bg);
+  border-radius: 0 6px 6px 0;
+}
+.pull p { font-size: 1.05rem; color: var(--text); font-style: italic; line-height: 1.6; margin: 0; font-weight: 500; }
+.pull cite { display: block; font-style: normal; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--light); margin-top: 10px; font-weight: 600; }
+
+.result-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 32px 0;
+}
+.rs-item {
+  padding: 28px 24px;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+}
+.rs-item:last-child { border-right: none; }
+.rs-num { font-size: 1.8rem; font-weight: 700; color: var(--green); letter-spacing: -0.03em; line-height: 1; }
+.rs-lbl { font-size: 0.78rem; color: var(--light); margin-top: 5px; line-height: 1.45; }
+
+/* ══════════════════════════════════
+   BLOG
+══════════════════════════════════ */
+.blog-hero { background: var(--bg); padding: 80px 0 56px; border-bottom: 1px solid var(--border); }
+.blog-hero h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 14px; color: var(--text); }
+.blog-hero p { font-size: 1rem; color: var(--sub); max-width: 52ch; line-height: 1.75; }
+
+.blog-layout {
+  max-width: 1060px; margin: 0 auto; padding: 56px 5% 80px;
+  display: grid; grid-template-columns: 1fr 320px; gap: 5rem; align-items: start;
+}
+
+.feat-article { cursor: pointer; }
+.feat-thumb {
+  background: var(--green);
+  aspect-ratio: 16/7;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 24px;
+  display: flex; align-items: flex-end; padding: 28px;
+}
+.feat-thumb::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%); }
+.feat-thumb-text { position: relative; z-index: 1; }
+.feat-thumb-text h2 { font-size: clamp(1.1rem, 1.8vw, 1.5rem); font-weight: 700; color: var(--white); line-height: 1.25; letter-spacing: -0.015em; }
+
+.art-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 8px; }
+.art-meta { font-size: 0.78rem; color: var(--light); }
+.art-excerpt { font-size: 0.93rem; color: var(--sub); line-height: 1.75; margin: 12px 0; }
+
+.read-btn {
+  font-size: 0.85rem; font-weight: 600; color: var(--green);
+  background: none; border: none; cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap 0.15s;
+  padding: 0;
+}
+.read-btn:hover { gap: 10px; }
+.read-btn::after { content: '→'; }
+
+.sidebar-title {
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--light);
+  padding-bottom: 14px; border-bottom: 2px solid var(--text); margin-bottom: 0;
+}
+
+.s-article {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.s-article:hover { opacity: 0.6; }
+.s-article h4 { font-size: 0.93rem; font-weight: 600; color: var(--text); line-height: 1.4; letter-spacing: -0.01em; margin-top: 4px; }
+
+/* ══════════════════════════════════
+   BLOG POST
+══════════════════════════════════ */
+.post-hero { background: var(--green); padding: 90px 0 56px; }
+.post-hero-in { max-width: 740px; margin: 0 auto; padding: 0 5%; }
+.post-hero h1 { font-size: clamp(1.8rem, 3.2vw, 2.8rem); color: var(--white); font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 16px; }
+.post-hero .meta { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.post-body { max-width: 680px; margin: 0 auto; padding: 56px 5% 80px; }
+.post-body p { font-size: 1rem; color: var(--sub); line-height: 1.88; margin-bottom: 20px; }
+.post-body h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.015em; margin: 44px 0 14px; color: var(--text); }
+.post-body h3 { font-size: 1.05rem; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.callout {
+  background: var(--bg);
+  border-left: 3px solid var(--green);
+  padding: 18px 24px;
+  margin: 28px 0;
+  font-size: 0.97rem;
+  color: var(--text);
+  line-height: 1.75;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 860px) {
+  .hero-inner, .for-whom-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .services-grid { grid-template-columns: 1fr; gap: 0; }
+  .stats-bar-inner { grid-template-columns: 1fr 1fr; }
+  .stats-bar-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 0; }
+  .kpi-strip-inner { grid-template-columns: 1fr 1fr; }
+  .kpi-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .result-strip { grid-template-columns: 1fr; }
+  .rs-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .blog-layout { grid-template-columns: 1fr; }
+  .cta-inner { flex-direction: column; align-items: flex-start; }
+  nav .nav-links li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" onclick="showPage('home')">MarketingGründer</a>
+  <ul class="nav-links">
+    <li><button onclick="showPage('home')">Start</button></li>
+    <li><button onclick="showPage('case')">Fallstudie</button></li>
+    <li><button onclick="showPage('blog')">Blog</button></li>
+    <li><button class="nav-btn" onclick="goContact()">Erstgespräch anfragen</button></li>
+  </ul>
+</nav>
+
+
+<!-- ═══════════════ HOME ═══════════════ -->
+<div id="page-home" class="page active pt">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="label">Digitales Marketing für Immobilienmakler</p>
+          <h1 class="h1">Mehr Eigentümer gewinnen. Objekte besser vermarkten.</h1>
+          <p class="lead">Wir bauen digitale Marketing-Systeme für Immobilienmakler mit 1 bis 10 Mitarbeitern — für planbare Eigentümeranfragen und professionelle Objektvermarktung.</p>
+          <div class="hero-btns">
+            <button class="btn-primary" onclick="goContact()">Kostenfreies Erstgespräch</button>
+            <button class="btn-secondary" onclick="showPage('case')">Fallstudie ansehen</button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="stat-row">
+            <div class="stat-box">
+              <div class="stat-num">11</div>
+              <div class="stat-label">Neue Mandate in 12 Monaten</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">65 €</div>
+              <div class="stat-label">Kosten pro qualifiziertem Lead</div>
+            </div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">385.000 €</div>
+            <div class="stat-label">Generierte Provision — Einzelmakler, 12 Monate (Fallstudie)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- LEISTUNGEN -->
+  <div class="sec">
+    <div class="wrap">
+      <p class="label">Unsere Leistungen</p>
+      <h2 class="h2">Zwei Bereiche. Ein System.</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <p class="service-num">01 — Eigentümerakquise</p>
+          <h3>Planbare Anfragen von verkaufswilligen Eigentümern</h3>
+          <p>Mit gezielten digitalen Kampagnen sprechen wir Eigentümer in Ihrer Region an — bevor diese aktiv suchen. Das Ergebnis: qualifizierte Anfragen, die direkt in Ihren Prozess einfließen.</p>
+          <ul class="service-list">
+            <li>Markt- und Zielgruppenanalyse für Ihre Region</li>
+            <li>Performance-Kampagnen auf Meta und Google</li>
+            <li>Spezialisierte Landingpages (z. B. Immobilienbewertung)</li>
+            <li>Lead-Qualifizierung und direkte Weiterleitung an Sie</li>
+            <li>Monatliches Reporting und laufende Optimierung</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <p class="service-num">02 — Objektvermarktung</p>
+          <h3>Objekte digital vermarkten — schneller, weiter, gezielter</h3>
+          <p>Professionelle Vermarktung Ihrer Verkaufsobjekte über digitale Kanäle: Von gezielten Käuferkampagnen bis zu Objekt-Landingpages. Mehr Reichweite, weniger Zeit bis zum Abschluss.</p>
+          <ul class="service-list">
+            <li>Digitale Exposé-Kampagnen auf Meta und Google</li>
+            <li>Gezielte Käuferansprache nach Profil und Budget</li>
+            <li>Objekt-Landingpages mit Anfrage-Formularen</li>
+            <li>Reichweite über Immobilienportale hinaus</li>
+            <li>Nachweisbare Verkürzung der Vermarktungszeit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="sec" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="wrap">
+      <p class="label">So funktioniert es</p>
+      <h2 class="h2">Vom ersten Kontakt zum wiederkehrenden Mandat.</h2>
+
+      <div class="steps">
+        <div class="step-row">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Analyse und Strategie</h3>
+            <p>Wir analysieren Ihr Fokusgebiet, Ihre Zielgruppe und das lokale Marktpotenzial. Daraus entsteht eine maßgeschneiderte Strategie — keine Vorlage von der Stange.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Kampagnen und Landingpages aufbauen</h3>
+            <p>Wir entwickeln Anzeigentexte, Creatives und Landingpages — alles auf Ihre Marke, Ihre Region und Ihre Zielkunden zugeschnitten.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Live schalten und erste Anfragen gewinnen</h3>
+            <p>Die Kampagnen gehen live. Erste qualifizierte Anfragen kommen in der Regel innerhalb der ersten Wochen. Alles wird vom ersten Klick an gemessen.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Anfragen werden direkt an Sie weitergeleitet</h3>
+            <p>Qualifizierte Kontaktanfragen landen direkt bei Ihnen. Ihre Aufgabe ist das Verkaufsgespräch — unsere der planbare Zulauf.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h3>Laufend optimieren und skalieren</h3>
+            <p>Was funktioniert, wird ausgebaut. Was nicht funktioniert, wird eliminiert. Das System verbessert sich jeden Monat — auf Basis echter Daten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOR WHOM -->
+  <div class="sec">
+    <div class="wrap">
+      <div class="for-whom-grid">
+        <div>
+          <p class="label">Für wen wir arbeiten</p>
+          <h2 class="h2">Immobilienmakler, die wachsen wollen.</h2>
+          <p style="margin-top: 16px; font-size: 0.97rem; max-width: 44ch; line-height: 1.78;">
+            Wir arbeiten ausschließlich mit Immobilienmaklern im Bereich Wohnimmobilien. Kein Marketing für alle — nur tiefe Expertise für eine Branche.
+          </p>
+          <ul class="criteria-list">
+            <li>Einzelmakler und Büros mit 1 bis 10 Mitarbeitern</li>
+            <li>Fokus auf Wohnimmobilien (EFH, ETW, MFH)</li>
+            <li>Klares Fokusgebiet und lokale Marktkenntnis</li>
+            <li>Bereitschaft, in einen digitalen Kanal zu investieren</li>
+          </ul>
+        </div>
+        <div class="for-whom-visual">
+          <div>
+            <div class="big-num">1–10</div>
+            <div class="big-num-label">Mitarbeiter</div>
+            <div class="for-whom-divider"></div>
+            <p style="font-size: 0.85rem; color: var(--light); max-width: 22ch; margin: 0 auto; line-height: 1.65;">
+              Genau diese Größe profitiert am stärksten von einem skalierbaren digitalen Akquise-System.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BAND -->
+  <div class="cta-section">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div>
+          <h2 class="h2">Wie viele Eigentümer in Ihrer Region sehen Sie heute nicht?</h2>
+          <p style="margin-top: 10px; font-size: 0.95rem;">30 Minuten. Kostenlos. Mit konkreten Zahlen für Ihr Gebiet.</p>
+        </div>
+        <button class="btn-primary" onclick="goContact()">Erstgespräch anfragen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-section" id="contact">
+    <div class="wrap">
+      <p class="label">Kontakt</p>
+      <h2 class="h2">Kostenloses Erstgespräch anfragen.</h2>
+
+      <div class="contact-grid">
+        <div>
+          <p class="contact-info-text">
+            In einem ersten, kostenfreien Gespräch analysieren wir das digitale Potenzial in Ihrer Region. Sie erhalten eine ehrliche Einschätzung — ohne Verkaufsdruck, ohne leere Versprechen.
+          </p>
+          <div class="info-item"><div class="lbl">Dauer</div><div class="val">ca. 30 Minuten</div></div>
+          <div class="info-item"><div class="lbl">Format</div><div class="val">Videocall oder Telefon</div></div>
+          <div class="info-item"><div class="lbl">Kosten</div><div class="val">Kostenlos und unverbindlich</div></div>
+        </div>
+
+        <form onsubmit="return false">
+          <div class="f-group"><label>Vor- und Nachname</label><input type="text" placeholder="Max Mustermann"></div>
+          <div class="f-group"><label>E-Mail-Adresse</label><input type="email" placeholder="max@mustermakler.de"></div>
+          <div class="f-group"><label>Ihr Fokusgebiet</label><input type="text" placeholder="z. B. Bayreuth und Umgebung"></div>
+          <div class="f-group">
+            <label>Aktuelle Mandate pro Monat</label>
+            <select>
+              <option value="">Bitte wählen …</option>
+              <option>1 bis 2 Mandate</option>
+              <option>3 bis 5 Mandate</option>
+              <option>6 bis 10 Mandate</option>
+              <option>Mehr als 10 Mandate</option>
+            </select>
+          </div>
+          <button class="btn-primary" style="width: 100%; margin-top: 4px;" type="submit">Gespräch anfragen →</button>
+          <p class="f-hint">Keine Datenweitergabe. Kein Spam.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="f-logo">MarketingGründer</div>
+    <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">AGB</a></div>
+    <div class="f-copy">© 2025 marketing-gruender.de</div>
+  </footer>
+
+</div><!-- /home -->
+
+
+<!-- ═══════════════ CASE STUDY ═══════════════ -->
+<div id="page-case" class="page pt">
+
+  <div class="case-hero">
+    <div class="case-hero-inner">
+      <p class="case-tag">Fallstudie — Einzelmakler, Bayern</p>
+      <h1>Vom Empfehlungsmakler zum digitalen Marktführer.</h1>
+      <p class="lead">Wie ein Einzelmakler in Bayern innerhalb von 12 Monaten 11 neue Verkaufsmandate über digitale Kanäle gewann — ohne Kaltakquise, ohne Empfehlungsnetzwerk.</p>
+    </div>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi-strip-inner">
+      <div class="kpi-item"><div class="kpi-num">353</div><div class="kpi-lbl">Qualifizierte Anfragen<br>in 12 Monaten</div></div>
+      <div class="kpi-item"><div class="kpi-num">11</div><div class="kpi-lbl">Unterschriebene<br>Verkaufsmandate</div></div>
+      <div class="kpi-item"><div class="kpi-num">~65 €</div><div class="kpi-lbl">Kosten pro Lead<br>(Phase 2)</div></div>
+      <div class="kpi-item"><div class="kpi-num">~385 T€</div><div class="kpi-lbl">Generierte<br>Provision gesamt</div></div>
+    </div>
+  </div>
+
+  <div class="case-body">
+
+    <h2>Ausgangssituation</h2>
+    <p>Stefan M. ist Immobilienmakler mit Fokus auf Wohnimmobilien in einer bayerischen Mittelstadt. Sieben Jahre selbstständig, solide Provision, guter Ruf — und trotzdem ein Unternehmen, das vollständig von Empfehlungen abhängig war.</p>
+    <p>Gute Monate folgten auf schlechte, ohne Muster und ohne Planbarkeit. Die Frage, wie viel Umsatz das nächste Quartal bringt, konnte er nicht beantworten.</p>
+
+    <div class="pull">
+      <p>„Ich hatte ein gutes Jahr hinter mir — aber ich wusste nicht, ob nächstes Jahr genauso wird. Das war das, was mich nachts wach hielt."</p>
+      <cite>Stefan M., Immobilienmakler</cite>
+    </div>
+
+    <h2>Herausforderung</h2>
+    <p>Stefan ist ein guter Makler — das Problem lag nicht im Gespräch, sondern davor. Er kam schlicht nicht regelmäßig genug in Kontakt mit Eigentümern, die ernsthaft verkaufen wollen. Das Netzwerk stagnierte, eine Website ohne System brachte keine Anfragen.</p>
+
+    <h2>Lösung</h2>
+    <p>Wir starteten mit einer regionalen Marktanalyse. Das ungenutzte Potenzial in Stefans Fokusgebiet war erheblich: mehrere Hundert Verkaufsobjekte pro Jahr, von denen er digital unsichtbar war.</p>
+    <p>In Phase 1 (3 Monate) legten wir das Fundament: Zielgruppenanalyse, Aufbau der ersten Kampagnen und einer Landingpage für kostenfreie Immobilienbewertungen. In Phase 2 (9 Monate) verfeinerten wir auf Qualität: gezieltere Segmentierung, höhere Abschlussquote.</p>
+
+    <h2>Ergebnisse</h2>
+    <div class="result-strip">
+      <div class="rs-item"><div class="rs-num">56</div><div class="rs-lbl">Leads in Monat 1–3<br>2 Mandate → ~56.000 €</div></div>
+      <div class="rs-item"><div class="rs-num">297</div><div class="rs-lbl">Leads in Monat 4–12<br>9 Mandate → ~329.000 €</div></div>
+      <div class="rs-item"><div class="rs-num">+100 %</div><div class="rs-lbl">Steigerung des<br>digitalen Marktanteils</div></div>
+    </div>
+
+    <p>Gesamtinvestment über 12 Monate: rund 67.000 €. Generierte Provision: rund 385.000 €. Stefan hat heute einen Akquise-Kanal, den er steuern kann — unabhängig vom Empfehlungsnetzwerk.</p>
+
+    <div class="pull">
+      <p>„Ich hatte 11 neue Mandate, die ich ohne das System nie gehabt hätte. Und ich weiß, dass nächsten Monat wieder welche kommen. Das ist das Entscheidende."</p>
+      <cite>Stefan M., Immobilienmakler</cite>
+    </div>
+
+    <div style="margin-top: 40px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <button class="btn-primary" onclick="goContact()">Erstgespräch anfragen →</button>
+      <button class="btn-secondary" onclick="showPage('home')">Zur Startseite</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="f-logo">MarketingGründer</div>
+    <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+    <div class="f-copy">© 2025 marketing-gruender.de</div>
+  </footer>
+
+</div><!-- /case -->
+
+
+<!-- ═══════════════ BLOG OVERVIEW ═══════════════ -->
+<div id="page-blog" class="page pt">
+
+  <div class="blog-hero">
+    <div class="wrap">
+      <p class="label">Wissen & Einblicke</p>
+      <h1>Praxis-Wissen für Immobilienmakler.</h1>
+      <p>Keine Theorie. Nur konkrete Erkenntnisse aus unserer täglichen Arbeit — was funktioniert, was nicht, und warum.</p>
+    </div>
+  </div>
+
+  <div class="blog-layout">
+    <div>
+      <div class="feat-article" onclick="showPage('post')">
+        <div class="feat-thumb">
+          <div class="feat-thumb-text">
+            <p class="art-tag" style="color: var(--gold); margin-bottom: 6px;">Strategie</p>
+            <h2>Warum Empfehlungen allein kein Geschäftsmodell sind — und was Makler stattdessen brauchen</h2>
+          </div>
+        </div>
+        <p class="art-meta">12. März 2025 · 7 Min. Lesezeit</p>
+        <p class="art-excerpt">Fast jeder Makler hat sein Unternehmen auf Empfehlungen aufgebaut. Das ist gut — aber es reicht nicht. Hier erfahren Sie, warum und was sich konkret ändern sollte.</p>
+        <button class="read-btn">Artikel lesen</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-title">Weitere Artikel</div>
+      <div class="s-article"><p class="art-tag">Leadgenerierung</p><h4>Was ein qualifizierter Lead wirklich kostet — und was er bringen sollte</h4><p class="art-meta" style="margin-top: 4px;">28. Feb. 2025 · 5 Min.</p></div>
+      <div class="s-article"><p class="art-tag">Werbeanzeigen</p><h4>Meta oder Google: Wo Immobilienmakler ihr Budget richtig einsetzen</h4><p class="art-meta" style="margin-top: 4px;">14. Feb. 2025 · 6 Min.</p></div>
+      <div class="s-article"><p class="art-tag">Objektvermarktung</p><h4>Objekte digital vermarkten: Wie Sie über Portale hinaus Käufer erreichen</h4><p class="art-meta" style="margin-top: 4px;">3. Feb. 2025 · 5 Min.</p></div>
+      <div class="s-article"><p class="art-tag">Praxis</p><h4>Eigentümer ansprechen, bevor sie aktiv suchen: vorausschauende Akquise</h4><p class="art-meta" style="margin-top: 4px;">7. Jan. 2025 · 5 Min.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="f-logo">MarketingGründer</div>
+    <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+    <div class="f-copy">© 2025 marketing-gruender.de</div>
+  </footer>
+
+</div><!-- /blog -->
+
+
+<!-- ═══════════════ BLOG POST ═══════════════ -->
+<div id="page-post" class="page pt">
+
+  <div class="post-hero">
+    <div class="post-hero-in">
+      <p class="art-tag" style="margin-bottom: 14px;">Strategie</p>
+      <h1>Warum Empfehlungen allein kein Geschäftsmodell sind — und was Immobilienmakler stattdessen brauchen</h1>
+      <p class="meta" style="margin-top: 16px;">12. März 2025 · 7 Min. Lesezeit</p>
+    </div>
+  </div>
+
+  <div class="post-body">
+    <p>Wenn Sie heute gefragt werden, woher Ihre Aufträge kommen, ist die Antwort bei den meisten Immobilienmaklern dieselbe: Empfehlungen. Ehemalige Kunden, die weitererzählen. Ein Netzwerk aus Notaren, Steuerberatern, Bankberatern.</p>
+    <p>Das ist gut. Empfehlungen sind ein Zeichen von Qualität — und sie kosten kaum etwas. Das Problem ist nicht, dass Empfehlungen schlecht sind. Das Problem ist, wenn sie die <strong style="color: var(--text); font-weight: 600;">einzige</strong> Quelle sind.</p>
+
+    <div class="callout">Die unbequeme Wahrheit: Empfehlungen sind nicht planbar. Sie können sie nicht verdoppeln, indem Sie mehr arbeiten. Und wenn Ihr Netzwerk stagniert, stagnieren sie mit.</div>
+
+    <h2>Das Empfehlungs-Plateau</h2>
+    <p>Die meisten Makler kennen dieses Muster: In den ersten Jahren wächst das Geschäft schnell. Empfehlungen kommen rein, das Netzwerk baut sich auf. Dann — irgendwo zwischen Jahr drei und sieben — flacht es ab. Nicht weil die Arbeit schlechter wird, sondern weil jedes Netzwerk eine natürliche Sättigungsgrenze hat.</p>
+    <p>Das Ergebnis: Gute Monate folgen auf schlechte, ohne dass Sie verstehen warum. Ihr Unternehmen ist nicht steuerbar.</p>
+
+    <h2>Was Planbarkeit bedeutet</h2>
+    <p>Planbarkeit heißt nicht, dass jeden Monat exakt gleich viele Anfragen kommen. Es bedeutet, dass Sie einen Kanal haben, den Sie steuern können — den Sie aufdrehen, wenn Sie mehr Mandate brauchen, und drosseln, wenn Sie ausgelastet sind.</p>
+    <p>Ein funktionierendes digitales Akquise-System arbeitet so: Sie investieren ein definiertes Budget in gezielte Kampagnen. Diese erreichen Eigentümer in Ihrer Region — auch solche, die noch nicht aktiv nach einem Makler suchen. Die Eigentümer landen auf einer spezialisierten Seite, tragen ihre Daten ein, und die Anfrage landet bei Ihnen. Kein Zufall. Ein Prozess.</p>
+
+    <h3>Was das konkret bedeutet</h3>
+    <p>Bei einem monatlichen Werbebudget von 1.000 € in einer mittelgroßen deutschen Stadt: 10 bis 16 qualifizierte Anfragen pro Monat, zu Kosten von rund 65 bis 100 € pro Anfrage. Bei einer durchschnittlichen Provision von 15.000 € reicht eine Abschlussquote von 10 %, um den Kanal deutlich profitabel zu machen.</p>
+
+    <h2>Empfehlungen ersetzen? Nein — ergänzen.</h2>
+    <p>Die Frage lautet nicht: Empfehlungen oder digitale Akquise. Die Frage lautet: Was passiert, wenn Empfehlungen ausbleiben? Wer nur einen Kanal hat, ist fragil. Wer zwei hat, hat Stabilität.</p>
+
+    <div class="callout">Die Makler, die in drei Jahren noch stark am Markt sind, sind nicht unbedingt die mit dem besten Netzwerk. Es sind die mit dem besten System.</div>
+
+    <h2>Der erste Schritt</h2>
+    <p>Stellen Sie sich eine einfache Frage: Wenn Ihr stärkstes Empfehlungsnetzwerk heute aufhört, Sie weiterzuempfehlen — was passiert dann? Wenn die Antwort unangenehm ist, ist das der richtige Moment für einen zweiten Kanal.</p>
+    <p>Das muss nicht groß starten. Ein klares Fokusgebiet, eine definierte Zielgruppe, ein strukturiertes Angebot — und dann: messen, optimieren, skalieren. Wer heute anfängt, hat in 12 Monaten ein funktionierendes System.</p>
+
+    <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); display: flex; gap: 12px; flex-wrap: wrap;">
+      <button class="btn-primary" onclick="goContact()">Erstgespräch anfragen →</button>
+      <button class="btn-secondary" onclick="showPage('blog')">Zurück zum Blog</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="f-logo">MarketingGründer</div>
+    <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+    <div class="f-copy">© 2025 marketing-gruender.de</div>
+  </footer>
+
+</div><!-- /post -->
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function goContact() {
+  showPage('home');
+  setTimeout(() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }), 120);
+}
+</script>
+</body>
+</html>
