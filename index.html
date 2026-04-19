@@ -3,1091 +3,685 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketing Gründer – Digitales Marketing für Immobilienmakler</title>
+<title>MAILEXPRESS Logistik GmbH – Dein Kurierdienst aus Dresden</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-
-/* ─── RESET & BASE ─── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --green:   #1c3d2c;
-  --green2:  #264d38;
-  --accent:  #2c6e49;
-  --gold:    #b8953f;
-  --text:    #111111;
-  --sub:     #555555;
-  --light:   #777777;
-  --border:  #e4e4e0;
-  --bg:      #f8f8f5;
-  --white:   #ffffff;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background: var(--white);
-  color: var(--text);
-  font-size: 17px;
-  line-height: 1.7;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ─── PAGE SYSTEM ─── */
-.page { display: none; }
-.page.active { display: block; }
-
-/* ─── NAV ─── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  height: 68px;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 5%;
-}
-
-.logo {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--green);
-  cursor: pointer;
-  text-decoration: none;
-  letter-spacing: -0.01em;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex; align-items: center; gap: 2rem;
-}
-
-.nav-links button, .nav-links a {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--sub);
-  background: none; border: none;
-  cursor: pointer; text-decoration: none;
-  transition: color 0.15s;
-}
-
-.nav-links button:hover, .nav-links a:hover { color: var(--text); }
-
-.nav-btn {
-  background: var(--green) !important;
-  color: var(--white) !important;
-  padding: 0.55rem 1.3rem;
-  border-radius: 6px !important;
-  font-size: 0.88rem !important;
-  font-weight: 600 !important;
-}
-.nav-btn:hover { background: var(--green2) !important; color: var(--white) !important; }
-
-/* ─── LAYOUT ─── */
-.pt { padding-top: 68px; }
-.wrap { max-width: 1060px; margin: 0 auto; padding: 0 5%; }
-.sec { padding: 80px 0; }
-.sec-lg { padding: 100px 0; }
-
-/* ─── TYPOGRAPHY ─── */
-.label {
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--gold);
-  margin-bottom: 16px;
-}
-
-h1, h2, h3 { color: var(--text); font-weight: 700; }
-
-.h1 {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-}
-
-.h2 {
-  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-  line-height: 1.18;
-  letter-spacing: -0.02em;
-}
-
-.h3 {
-  font-size: 1.15rem;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-  font-weight: 600;
-}
-
-.lead {
-  font-size: 1.08rem;
-  color: var(--sub);
-  line-height: 1.75;
-  max-width: 58ch;
-}
-
-p { color: var(--sub); }
-
-/* ─── BUTTONS ─── */
-.btn-primary {
-  display: inline-block;
-  background: var(--green);
-  color: var(--white);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.92rem;
-  font-weight: 600;
-  padding: 0.8rem 1.8rem;
-  border-radius: 6px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.btn-primary:hover { background: var(--green2); }
-
-.btn-secondary {
-  display: inline-block;
-  background: transparent;
-  color: var(--text);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.92rem;
-  font-weight: 500;
-  padding: 0.78rem 1.8rem;
-  border-radius: 6px;
-  text-decoration: none;
-  border: 1.5px solid var(--border);
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
-}
-.btn-secondary:hover { border-color: #aaa; color: var(--text); }
-
-/* ─── HERO ─── */
-.hero {
-  padding: 90px 0 80px;
-  background: var(--white);
-}
-
-.hero-inner {
-  max-width: 1060px;
-  margin: 0 auto;
-  padding: 0 5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-
-.hero-content .label { margin-bottom: 20px; }
-
-.hero-content h1 {
-  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: var(--text);
-}
-
-.hero-content .lead { margin-bottom: 36px; max-width: 46ch; }
-
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-
-.hero-right { display: flex; flex-direction: column; gap: 16px; }
-
-.stat-box {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 28px 32px;
-}
-
-.stat-box .stat-num {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--green);
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.stat-box .stat-label {
-  font-size: 0.85rem;
-  color: var(--light);
-  font-weight: 400;
-}
-
-.stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-/* ─── DIVIDER ─── */
-hr { border: none; border-top: 1px solid var(--border); }
-
-/* ─── LEISTUNGEN ─── */
-.services-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  margin-top: 48px;
-}
-
-.service-card {
-  background: var(--white);
-  padding: 48px 44px;
-}
-
-.service-num {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 24px;
-}
-
-.service-card h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  margin-bottom: 14px;
-  line-height: 1.3;
-  color: var(--text);
-}
-
-.service-card p {
-  font-size: 0.95rem;
-  color: var(--sub);
-  line-height: 1.75;
-  margin-bottom: 24px;
-}
-
-.service-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.service-list li {
-  font-size: 0.88rem;
-  color: var(--sub);
-  padding-left: 18px;
-  position: relative;
-  line-height: 1.5;
-}
-
-.service-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: 0.82rem;
-}
-
-/* ─── NUMBERS / STATS BAR ─── */
-.stats-bar {
-  background: var(--green);
-  padding: 56px 0;
-}
-
-.stats-bar-inner {
-  max-width: 1060px;
-  margin: 0 auto;
-  padding: 0 5%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-}
-
-.stats-bar-item {
-  padding: 0 32px;
-  border-right: 1px solid rgba(255,255,255,0.12);
-}
-.stats-bar-item:first-child { padding-left: 0; }
-.stats-bar-item:last-child { border-right: none; }
-
-.stats-bar-item .num {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
-.stats-bar-item .desc {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.45;
-}
-
-/* ─── HOW IT WORKS ─── */
-.steps {
-  margin-top: 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.step-row {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 0;
-  border-bottom: 1px solid var(--border);
-  transition: background 0.15s;
-}
-.step-row:last-child { border-bottom: none; }
-.step-row:hover { background: var(--bg); }
-
-.step-num {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 1px solid var(--border);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--light);
-  letter-spacing: 0.05em;
-}
-
-.step-content {
-  padding: 28px 36px;
-}
-
-.step-content h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text);
-}
-
-.step-content p {
-  font-size: 0.9rem;
-  color: var(--sub);
-  line-height: 1.7;
-  max-width: 68ch;
-}
-
-/* ─── FOR WHOM ─── */
-.for-whom-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-  margin-top: 0;
-}
-
-.criteria-list {
-  list-style: none;
-  margin-top: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.criteria-list li {
-  font-size: 0.93rem;
-  color: var(--sub);
-  padding: 16px 22px;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.criteria-list li:last-child { border-bottom: none; }
-
-.criteria-list li::before {
-  content: '';
-  display: block;
-  width: 8px; height: 8px;
-  min-width: 8px;
-  background: var(--accent);
-  border-radius: 50%;
-}
-
-.for-whom-visual {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  aspect-ratio: 4/3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.big-num {
-  font-size: 5.5rem;
-  font-weight: 700;
-  color: var(--green);
-  letter-spacing: -0.05em;
-  line-height: 1;
-}
-
-.big-num-label {
-  font-size: 0.8rem;
-  color: var(--light);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 8px;
-}
-
-.for-whom-divider {
-  width: 40px;
-  height: 2px;
-  background: var(--gold);
-  margin: 20px auto;
-}
-
-/* ─── CTA SECTION ─── */
-.cta-section {
-  background: var(--bg);
-  padding: 80px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.cta-inner {
-  max-width: 1060px;
-  margin: 0 auto;
-  padding: 0 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-}
-
-.cta-inner h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-  max-width: 46ch;
-}
-
-/* ─── CONTACT ─── */
-.contact-section { padding: 80px 0; }
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: start;
-  margin-top: 48px;
-}
-
-.contact-info-text {
-  font-size: 0.97rem;
-  color: var(--sub);
-  line-height: 1.78;
-  margin-bottom: 32px;
-}
-
-.info-item {
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-}
-.info-item:last-child { border-bottom: 1px solid var(--border); }
-.info-item .lbl { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--light); margin-bottom: 4px; font-weight: 500; }
-.info-item .val { font-size: 1rem; font-weight: 600; color: var(--text); }
-
-/* form */
-.f-group { margin-bottom: 16px; }
-.f-group label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--sub); margin-bottom: 6px; }
-.f-group input, .f-group select, .f-group textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1.5px solid var(--border);
-  border-radius: 6px;
-  background: var(--white);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.95rem;
-  color: var(--text);
-  outline: none;
-  transition: border-color 0.15s;
-  -webkit-appearance: none;
-}
-.f-group input:focus, .f-group select:focus, .f-group textarea:focus { border-color: var(--accent); }
-.f-group textarea { resize: vertical; min-height: 90px; }
-.f-hint { font-size: 0.78rem; color: var(--light); margin-top: 10px; text-align: center; }
-
-/* ─── FOOTER ─── */
-footer {
-  background: var(--text);
-  padding: 32px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.f-logo { font-size: 0.92rem; font-weight: 700; color: rgba(255,255,255,0.6); }
-.f-links { display: flex; gap: 1.8rem; }
-.f-links a { font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.15s; }
-.f-links a:hover { color: rgba(255,255,255,0.6); }
-.f-copy { font-size: 0.78rem; color: rgba(255,255,255,0.22); }
-
-/* ══════════════════════════════════
-   CASE STUDY
-══════════════════════════════════ */
-.case-hero { background: var(--green); padding: 90px 0 64px; }
-.case-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 5%; }
-.case-tag { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
-.case-hero h1 { font-size: clamp(2rem, 3.5vw, 3rem); color: var(--white); font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 20px; }
-.case-hero .lead { color: rgba(255,255,255,0.5); max-width: 54ch; }
-
-.kpi-strip {
-  border-bottom: 1px solid var(--border);
-  background: var(--white);
-}
-.kpi-strip-inner {
-  max-width: 1060px; margin: 0 auto; padding: 0 5%;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-}
-.kpi-item {
-  padding: 32px 24px;
-  border-right: 1px solid var(--border);
-}
-.kpi-item:last-child { border-right: none; }
-.kpi-num { font-size: 2rem; font-weight: 700; color: var(--green); letter-spacing: -0.03em; line-height: 1; }
-.kpi-lbl { font-size: 0.8rem; color: var(--light); margin-top: 5px; line-height: 1.45; }
-
-.case-body { max-width: 740px; margin: 0 auto; padding: 64px 5% 80px; }
-.case-body h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.015em; margin: 48px 0 14px; color: var(--text); }
-.case-body p { font-size: 0.97rem; color: var(--sub); line-height: 1.85; margin-bottom: 16px; }
-
-.pull {
-  border-left: 3px solid var(--gold);
-  padding: 18px 24px;
-  margin: 32px 0;
-  background: var(--bg);
-  border-radius: 0 6px 6px 0;
-}
-.pull p { font-size: 1.05rem; color: var(--text); font-style: italic; line-height: 1.6; margin: 0; font-weight: 500; }
-.pull cite { display: block; font-style: normal; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--light); margin-top: 10px; font-weight: 600; }
-
-.result-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 32px 0;
-}
-.rs-item {
-  padding: 28px 24px;
-  border-right: 1px solid var(--border);
-  background: var(--bg);
-}
-.rs-item:last-child { border-right: none; }
-.rs-num { font-size: 1.8rem; font-weight: 700; color: var(--green); letter-spacing: -0.03em; line-height: 1; }
-.rs-lbl { font-size: 0.78rem; color: var(--light); margin-top: 5px; line-height: 1.45; }
-
-/* ══════════════════════════════════
-   BLOG
-══════════════════════════════════ */
-.blog-hero { background: var(--bg); padding: 80px 0 56px; border-bottom: 1px solid var(--border); }
-.blog-hero h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 14px; color: var(--text); }
-.blog-hero p { font-size: 1rem; color: var(--sub); max-width: 52ch; line-height: 1.75; }
-
-.blog-layout {
-  max-width: 1060px; margin: 0 auto; padding: 56px 5% 80px;
-  display: grid; grid-template-columns: 1fr 320px; gap: 5rem; align-items: start;
-}
-
-.feat-article { cursor: pointer; }
-.feat-thumb {
-  background: var(--green);
-  aspect-ratio: 16/7;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 24px;
-  display: flex; align-items: flex-end; padding: 28px;
-}
-.feat-thumb::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%); }
-.feat-thumb-text { position: relative; z-index: 1; }
-.feat-thumb-text h2 { font-size: clamp(1.1rem, 1.8vw, 1.5rem); font-weight: 700; color: var(--white); line-height: 1.25; letter-spacing: -0.015em; }
-
-.art-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 8px; }
-.art-meta { font-size: 0.78rem; color: var(--light); }
-.art-excerpt { font-size: 0.93rem; color: var(--sub); line-height: 1.75; margin: 12px 0; }
-
-.read-btn {
-  font-size: 0.85rem; font-weight: 600; color: var(--green);
-  background: none; border: none; cursor: pointer;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  display: inline-flex; align-items: center; gap: 6px;
-  transition: gap 0.15s;
-  padding: 0;
-}
-.read-btn:hover { gap: 10px; }
-.read-btn::after { content: '→'; }
-
-.sidebar-title {
-  font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--light);
-  padding-bottom: 14px; border-bottom: 2px solid var(--text); margin-bottom: 0;
-}
-
-.s-article {
-  padding: 18px 0;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
-  transition: opacity 0.15s;
-}
-.s-article:hover { opacity: 0.6; }
-.s-article h4 { font-size: 0.93rem; font-weight: 600; color: var(--text); line-height: 1.4; letter-spacing: -0.01em; margin-top: 4px; }
-
-/* ══════════════════════════════════
-   BLOG POST
-══════════════════════════════════ */
-.post-hero { background: var(--green); padding: 90px 0 56px; }
-.post-hero-in { max-width: 740px; margin: 0 auto; padding: 0 5%; }
-.post-hero h1 { font-size: clamp(1.8rem, 3.2vw, 2.8rem); color: var(--white); font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 16px; }
-.post-hero .meta { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
-
-.post-body { max-width: 680px; margin: 0 auto; padding: 56px 5% 80px; }
-.post-body p { font-size: 1rem; color: var(--sub); line-height: 1.88; margin-bottom: 20px; }
-.post-body h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.015em; margin: 44px 0 14px; color: var(--text); }
-.post-body h3 { font-size: 1.05rem; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
-.callout {
-  background: var(--bg);
-  border-left: 3px solid var(--green);
-  padding: 18px 24px;
-  margin: 28px 0;
-  font-size: 0.97rem;
-  color: var(--text);
-  line-height: 1.75;
-  border-radius: 0 6px 6px 0;
-}
-
-/* ─── RESPONSIVE ─── */
-@media (max-width: 860px) {
-  .hero-inner, .for-whom-grid, .contact-grid { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .services-grid { grid-template-columns: 1fr; gap: 0; }
-  .stats-bar-inner { grid-template-columns: 1fr 1fr; }
-  .stats-bar-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 0; }
-  .kpi-strip-inner { grid-template-columns: 1fr 1fr; }
-  .kpi-item { border-right: none; border-bottom: 1px solid var(--border); }
-  .result-strip { grid-template-columns: 1fr; }
-  .rs-item { border-right: none; border-bottom: 1px solid var(--border); }
-  .blog-layout { grid-template-columns: 1fr; }
-  .cta-inner { flex-direction: column; align-items: flex-start; }
-  nav .nav-links li:not(:last-child):not(:nth-last-child(2)) { display: none; }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a class="logo" onclick="showPage('home')">MarketingGründer</a>
-  <ul class="nav-links">
-    <li><button onclick="showPage('home')">Start</button></li>
-    <li><button onclick="showPage('case')">Fallstudie</button></li>
-    <li><button onclick="showPage('blog')">Blog</button></li>
-    <li><button class="nav-btn" onclick="goContact()">Erstgespräch anfragen</button></li>
-  </ul>
+<nav id="main-nav">
+  <div class="nav-wrap">
+    <div class="logo" onclick="go('home')"><svg viewBox="0 0 218 66" xmlns="http://www.w3.org/2000/svg" aria-label="MEX mailexpress">
+  <path d="M2,48 L2,18 L10,18 L18,32 L26,18 L34,18 L34,48 L26,48 L26,30 L18,43 L10,30 L10,48 Z" fill="#F47A20"/>
+  <path d="M38,48 L38,18 L62,18 L62,25 L46,25 L46,31 L61,31 L61,37 L46,37 L46,41 L62,41 L62,48 Z" fill="#F47A20"/>
+  <path d="M66,18 L76,18 L84,30 L92,18 L102,18 L89,33 L103,48 L92,48 L84,36 L76,48 L65,48 L79,33 Z" fill="#F47A20"/>
+  <polygon points="112,14 136,8 136,40 112,46" fill="#3AAEE0"/>
+  <polygon points="112,14 136,8 152,18 128,24" fill="#6DCBEE"/>
+  <polygon points="136,8 152,18 152,48 136,40" fill="#1E88C6"/>
+  <line x1="112" y1="28" x2="136" y2="22" stroke="white" stroke-width="1.2" stroke-opacity="0.5"/>
+  <text x="2" y="62" font-family="'Franklin Gothic Medium','Arial Narrow','Arial',sans-serif" font-weight="700" font-size="15" fill="#1E88C6" letter-spacing="2.8">mailexpress</text>
+</svg></div>
+    <ul class="nav-links">
+      <li><a data-p="home"  onclick="go('home')">Start</a></li>
+      <li><a data-p="leist" onclick="go('leist')">Leistungen</a></li>
+      <li><a data-p="ueber" onclick="go('ueber')">Ueber uns</a></li>
+      <li><a data-p="blog"  onclick="go('blog')">Blog</a></li>
+      <li><a data-p="kontakt" onclick="go('kontakt')">Kontakt</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-outline" onclick="go('kontakt')">Sendungsverfolgung</a>
+      <a class="btn btn-primary" onclick="go('kontakt')">Auftrag erteilen</a>
+    </div>
+  </div>
 </nav>
 
+<!-- ══ HOME ══ -->
+<div id="p-home" class="page active">
 
-<!-- ═══════════════ HOME ═══════════════ -->
-<div id="page-home" class="page active pt">
-
-  <!-- HERO -->
   <div class="hero">
-    <div class="wrap">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <p class="label">Digitales Marketing für Immobilienmakler</p>
-          <h1 class="h1">Mehr Eigentümer gewinnen. Objekte besser vermarkten.</h1>
-          <p class="lead">Wir bauen digitale Marketing-Systeme für Immobilienmakler mit 1 bis 10 Mitarbeitern — für planbare Eigentümeranfragen und professionelle Objektvermarktung.</p>
-          <div class="hero-btns">
-            <button class="btn-primary" onclick="goContact()">Kostenfreies Erstgespräch</button>
-            <button class="btn-secondary" onclick="showPage('case')">Fallstudie ansehen</button>
-          </div>
+    <div class="hero-texture"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow"><span></span>Seit 24 Jahren. Dresden. Weltweit.</div>
+        <h1>Einfach.<br>Persoenlich.<br><strong>Puenktlich.</strong></h1>
+        <p class="hero-lead">Deine Ware kommt an - ohne Warteschleifen, ohne anonyme Hotlines. Mit einem echten Ansprechpartner, der dein Unternehmen kennt.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" onclick="go('leist')">Leistungen entdecken &rarr;</a>
+          <a class="btn btn-ghost-light btn-lg" onclick="go('kontakt')">Angebot anfragen</a>
         </div>
-
-        <div class="hero-right">
-          <div class="stat-row">
-            <div class="stat-box">
-              <div class="stat-num">11</div>
-              <div class="stat-label">Neue Mandate in 12 Monaten</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-num">65 €</div>
-              <div class="stat-label">Kosten pro qualifiziertem Lead</div>
-            </div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num">385.000 €</div>
-            <div class="stat-label">Generierte Provision — Einzelmakler, 12 Monate (Fallstudie)</div>
-          </div>
+        <div class="hero-stats">
+          <div class="hs-item"><div class="hs-num">24<em>J</em></div><div class="hs-label">Jahre Erfahrung in der Logistik</div></div>
+          <div class="hs-item"><div class="hs-num">60<em>k+</em></div><div class="hs-label">Pakete pro Jahr zugestellt</div></div>
+          <div class="hs-item"><div class="hs-num">250</div><div class="hs-label">Sendungen taeglich aus Dresden</div></div>
+          <div class="hs-item"><div class="hs-num">ab <em>6&euro;</em></div><div class="hs-label">Versand schon ab 6 Euro</div></div>
         </div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-head">Alle Dienste auf einen Blick</div>
+        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">KF</div><div><div class="hc-name">Kurierfahrt</div><div class="hc-desc">Direkt, persoenlich begleitet &middot; ganz Europa</div></div><div class="hc-price">ab 8 &euro;</div></div>
+        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">SD</div><div><div class="hc-name">Sameday</div><div class="hc-desc">Heute raus, heute da &middot; EU-Ballungsraeume</div></div><div class="hc-price">ab 150 &euro;</div></div>
+        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">EX</div><div><div class="hc-name">Express Overnight</div><div class="hc-desc">Abholung bis 20 Uhr &middot; Zustellung ab 8 Uhr</div></div><div class="hc-price">ab 8 &euro;</div></div>
+        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">IN</div><div><div class="hc-name">International</div><div class="hc-desc">Weltweit &middot; Luft, Schiff, LKW &middot; bis 500 kg</div></div><div class="hc-price">ab 30 &euro;</div></div>
+        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">PK</div><div><div class="hc-name">Paket</div><div class="hc-desc">1-3 Werktage &middot; bis 500 kg &middot; deutschlandweit</div></div><div class="hc-price">ab 6 &euro;</div></div>
+        <div class="hc-foot"><span class="hc-foot-text">Rahmenvertraege fuer Firmenkunden</span><a onclick="go('kontakt')">Anfrage &rarr;</a></div>
       </div>
     </div>
   </div>
 
-  <hr>
+  <div class="track-band">
+    <div class="track-inner">
+      <div class="track-label">Sendungsverfolgung</div>
+      <div class="track-form">
+        <input type="text" id="ti1" placeholder="Sendungsnummer eingeben ...">
+        <button onclick="doTrack('ti1')">Verfolgen &rarr;</button>
+      </div>
+      <div class="track-phone">Fragen? <a href="tel:+493514383482">+49 351 438 348 20</a></div>
+    </div>
+  </div>
 
-  <!-- LEISTUNGEN -->
-  <div class="sec">
+  <section style="background:var(--off)">
     <div class="wrap">
-      <p class="label">Unsere Leistungen</p>
-      <h2 class="h2">Zwei Bereiche. Ein System.</h2>
+      <div class="split">
+        <div class="split-visual">
+          <div class="split-visual-icon">&#127970;</div>
+          <div class="split-visual-label">Zwickauer Str. 72-74 &middot; Dresden</div>
+        </div>
+        <div class="split-body">
+          <div class="label label-b">Warum MAILEXPRESS</div>
+          <h2 class="sh2">Persoenlich.<br>Direkt. Fair.</h2>
+          <p>Viele Unternehmen wechseln zu uns, weil ihnen bei DHL, DPD oder UPS das Wichtigste fehlt: ein echter Ansprechpartner. Keine Warteschleifen, keine anonymen Formulare.</p>
+          <p>Dazu kommen bessere Konditionen, besonders im internationalen Versand. Wir verhandeln fuer dich - und das seit 24 Jahren.</p>
+          <ul class="checklist">
+            <li>Fester Ansprechpartner direkt in der Disposition</li>
+            <li>Deutlich bessere Preise im internationalen Versand</li>
+            <li>Unkomplizierte Auftragserteilung - Anruf genuegt</li>
+            <li>Rahmenvertraege fuer Industriekunden (1-5 Auftraege taeglich)</li>
+            <li>Alle Fahrzeugklassen - Fahrrad bis 40-Tonner mit Hebebuehne</li>
+          </ul>
+          <a class="btn btn-dark btn-lg" onclick="go('ueber')">Mehr ueber uns &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section>
+    <div class="wrap">
+      <div class="section-intro">
+        <div class="label label-o">Leistungen</div>
+        <h2 class="sh2">Fuenf Dienste. Eine Anlaufstelle.</h2>
+        <p class="sub">Ob Industrie, Mittelstand oder Onlineshop - wir finden den richtigen Weg fuer deine Ware.</p>
+      </div>
       <div class="services-grid">
-        <div class="service-card">
-          <p class="service-num">01 — Eigentümerakquise</p>
-          <h3>Planbare Anfragen von verkaufswilligen Eigentümern</h3>
-          <p>Mit gezielten digitalen Kampagnen sprechen wir Eigentümer in Ihrer Region an — bevor diese aktiv suchen. Das Ergebnis: qualifizierte Anfragen, die direkt in Ihren Prozess einfließen.</p>
-          <ul class="service-list">
-            <li>Markt- und Zielgruppenanalyse für Ihre Region</li>
-            <li>Performance-Kampagnen auf Meta und Google</li>
-            <li>Spezialisierte Landingpages (z. B. Immobilienbewertung)</li>
-            <li>Lead-Qualifizierung und direkte Weiterleitung an Sie</li>
-            <li>Monatliches Reporting und laufende Optimierung</li>
-          </ul>
+        <div class="svc" onclick="go('leist')">
+          <div class="svc-icon">&#128663;</div>
+          <div class="svc-name">MEX Kurierfahrt</div>
+          <div class="svc-text">Direktfahrt, kein Umladen, kein Umweg. Ein Fahrer, ein Fahrzeug, ein Ziel - fuer alle Sendungsgroessen in ganz Europa.</div>
+          <div class="svc-specs">
+            <div class="svc-spec"><span class="svc-spec-k">Ziele</span><span class="svc-spec-v">Ganz Europa</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Abholung</span><span class="svc-spec-v">Nach Wunsch, kurzfristig</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Fahrzeuge</span><span class="svc-spec-v">Fahrrad bis LKW+Hebebuehne</span></div>
+          </div>
+          <div class="svc-price">ab 8,00 &euro;</div>
         </div>
-        <div class="service-card">
-          <p class="service-num">02 — Objektvermarktung</p>
-          <h3>Objekte digital vermarkten — schneller, weiter, gezielter</h3>
-          <p>Professionelle Vermarktung Ihrer Verkaufsobjekte über digitale Kanäle: Von gezielten Käuferkampagnen bis zu Objekt-Landingpages. Mehr Reichweite, weniger Zeit bis zum Abschluss.</p>
-          <ul class="service-list">
-            <li>Digitale Exposé-Kampagnen auf Meta und Google</li>
-            <li>Gezielte Käuferansprache nach Profil und Budget</li>
-            <li>Objekt-Landingpages mit Anfrage-Formularen</li>
-            <li>Reichweite über Immobilienportale hinaus</li>
-            <li>Nachweisbare Verkürzung der Vermarktungszeit</li>
-          </ul>
+        <div class="svc" onclick="go('leist')">
+          <div class="svc-icon">&#127758;</div>
+          <div class="svc-name">MEX International</div>
+          <div class="svc-text">Unser staerkster Dienst. Weltweiter Versand mit echten Kostenvorteilen gegenueber DHL, UPS und FedEx - mit persoenlicher Beratung.</div>
+          <div class="svc-specs">
+            <div class="svc-spec"><span class="svc-spec-k">Ziele</span><span class="svc-spec-v">Weltweit</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Gewicht</span><span class="svc-spec-v">Bis 500 kg, bis 6 m</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Abholung</span><span class="svc-spec-v">Taeglich bis 20:00 Uhr</span></div>
+          </div>
+          <div class="svc-price">ab 30,00 &euro;</div>
+        </div>
+        <div class="svc" onclick="go('leist')">
+          <div class="svc-icon">&#9992;</div>
+          <div class="svc-name">MEX Sameday</div>
+          <div class="svc-text">Heute raus, heute da. Durch Kombination von Bahn, Flugzeug und lokalem Kurier erreichen Sendungen EU-Staedte noch am selben Tag.</div>
+          <div class="svc-specs">
+            <div class="svc-spec"><span class="svc-spec-k">Laufzeit</span><span class="svc-spec-v">Ab 3 Stunden</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Ziele</span><span class="svc-spec-v">EU-Ballungsraeume ab 200 km</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Gewicht</span><span class="svc-spec-v">Bis 20 kg, bis 1,20 m</span></div>
+          </div>
+          <div class="svc-price">ab 150,00 &euro;</div>
+        </div>
+        <div class="svc" onclick="go('leist')">
+          <div class="svc-icon">&#9889;</div>
+          <div class="svc-name">MEX Express</div>
+          <div class="svc-text">Abholung am Abend, garantierte Zustellung am naechsten Werktag ab 8 Uhr. Auch fuer sperrige Gueter bis 6 m und 500 kg.</div>
+          <div class="svc-specs">
+            <div class="svc-spec"><span class="svc-spec-k">Abholung</span><span class="svc-spec-v">Werktags bis 20:00 Uhr</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Zustellung</span><span class="svc-spec-v">Ab 8 Uhr Folgewerktag</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Gewicht</span><span class="svc-spec-v">Bis 500 kg, bis 6 m</span></div>
+          </div>
+          <div class="svc-price">ab 8,00 &euro;</div>
+        </div>
+        <div class="svc" onclick="go('leist')">
+          <div class="svc-icon">&#128230;</div>
+          <div class="svc-name">MEX Paket</div>
+          <div class="svc-text">Guenstig, zuverlaessig, 1-3 Werktage. Rahmenvertraege mit Festpreisen fuer Unternehmen mit konstantem Versandvolumen.</div>
+          <div class="svc-specs">
+            <div class="svc-spec"><span class="svc-spec-k">Laufzeit</span><span class="svc-spec-v">1-3 Arbeitstage</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Ziele</span><span class="svc-spec-v">Deutschlandweit</span></div>
+            <div class="svc-spec"><span class="svc-spec-k">Gewicht</span><span class="svc-spec-v">Bis 70 kg/Paket, bis 500 kg</span></div>
+          </div>
+          <div class="svc-price">ab 6,00 &euro;</div>
+        </div>
+        <div class="svc-cta" onclick="go('kontakt')">
+          <div style="flex:1">
+            <h3>Nicht sicher, was passt?</h3>
+            <p>Ruf uns kurz an - wir finden in wenigen Minuten die richtige Loesung fuer deine Sendung.</p>
+            <div style="margin-top:20px"><span style="background:var(--o);color:#fff;padding:6px 14px;border-radius:8px;font-size:13px;font-weight:700;font-family:'Barlow Condensed',sans-serif">Jetzt anfragen &rarr;</span></div>
+          </div>
+          <div class="arrow">&rarr;</div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- PROCESS -->
-  <div class="sec" style="background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <section style="background:var(--off)">
     <div class="wrap">
-      <p class="label">So funktioniert es</p>
-      <h2 class="h2">Vom ersten Kontakt zum wiederkehrenden Mandat.</h2>
-
-      <div class="steps">
-        <div class="step-row">
-          <div class="step-num">01</div>
-          <div class="step-content">
-            <h3>Analyse und Strategie</h3>
-            <p>Wir analysieren Ihr Fokusgebiet, Ihre Zielgruppe und das lokale Marktpotenzial. Daraus entsteht eine maßgeschneiderte Strategie — keine Vorlage von der Stange.</p>
-          </div>
-        </div>
-        <div class="step-row">
-          <div class="step-num">02</div>
-          <div class="step-content">
-            <h3>Kampagnen und Landingpages aufbauen</h3>
-            <p>Wir entwickeln Anzeigentexte, Creatives und Landingpages — alles auf Ihre Marke, Ihre Region und Ihre Zielkunden zugeschnitten.</p>
-          </div>
-        </div>
-        <div class="step-row">
-          <div class="step-num">03</div>
-          <div class="step-content">
-            <h3>Live schalten und erste Anfragen gewinnen</h3>
-            <p>Die Kampagnen gehen live. Erste qualifizierte Anfragen kommen in der Regel innerhalb der ersten Wochen. Alles wird vom ersten Klick an gemessen.</p>
-          </div>
-        </div>
-        <div class="step-row">
-          <div class="step-num">04</div>
-          <div class="step-content">
-            <h3>Anfragen werden direkt an Sie weitergeleitet</h3>
-            <p>Qualifizierte Kontaktanfragen landen direkt bei Ihnen. Ihre Aufgabe ist das Verkaufsgespräch — unsere der planbare Zulauf.</p>
-          </div>
-        </div>
-        <div class="step-row">
-          <div class="step-num">05</div>
-          <div class="step-content">
-            <h3>Laufend optimieren und skalieren</h3>
-            <p>Was funktioniert, wird ausgebaut. Was nicht funktioniert, wird eliminiert. Das System verbessert sich jeden Monat — auf Basis echter Daten.</p>
-          </div>
-        </div>
+      <div class="section-intro" style="text-align:center;max-width:600px;margin:0 auto 60px">
+        <div class="label label-o">So funktioniert es</div>
+        <h2 class="sh2">Von der Anfrage zur Zustellung</h2>
+        <p class="sub" style="margin:0 auto">Einfacher Ablauf - damit du dich auf dein Kerngeschaeft konzentrieren kannst.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step"><div class="ps-circle">1</div><div class="ps-title">Auftrag erteilen</div><div class="ps-text">Per Telefon, E-Mail oder Online-Formular - schnell und unkompliziert. Wir sind erreichbar, wenn du uns brauchst.</div></div>
+        <div class="process-step"><div class="ps-circle">2</div><div class="ps-title">Abholung</div><div class="ps-text">Wir kommen zu dir. Werktags bis 20 Uhr, fuer Kurierfahrten auch spaeter - nach Absprache, ohne Aufpreis.</div></div>
+        <div class="process-step"><div class="ps-circle">3</div><div class="ps-title">Transport</div><div class="ps-text">Wir waehlen den optimalen Weg - Direktfahrt, multimodal ueber Bahn und Luft oder Netzwerkversand.</div></div>
+        <div class="process-step"><div class="ps-circle">4</div><div class="ps-title">Puenktliche Zustellung</div><div class="ps-text">Uebergabe zur vereinbarten Zeit. Auf Wunsch mit Zustellbestaetigung. Dein Ansprechpartner bleibt erreichbar.</div></div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- FOR WHOM -->
-  <div class="sec">
+  <section class="reviews-section">
     <div class="wrap">
-      <div class="for-whom-grid">
+      <div class="reviews-header">
         <div>
-          <p class="label">Für wen wir arbeiten</p>
-          <h2 class="h2">Immobilienmakler, die wachsen wollen.</h2>
-          <p style="margin-top: 16px; font-size: 0.97rem; max-width: 44ch; line-height: 1.78;">
-            Wir arbeiten ausschließlich mit Immobilienmaklern im Bereich Wohnimmobilien. Kein Marketing für alle — nur tiefe Expertise für eine Branche.
-          </p>
-          <ul class="criteria-list">
-            <li>Einzelmakler und Büros mit 1 bis 10 Mitarbeitern</li>
-            <li>Fokus auf Wohnimmobilien (EFH, ETW, MFH)</li>
-            <li>Klares Fokusgebiet und lokale Marktkenntnis</li>
-            <li>Bereitschaft, in einen digitalen Kanal zu investieren</li>
-          </ul>
+          <div class="label label-o">Kundenstimmen</div>
+          <h2 class="sh2">Was unsere Kunden sagen</h2>
         </div>
-        <div class="for-whom-visual">
-          <div>
-            <div class="big-num">1–10</div>
-            <div class="big-num-label">Mitarbeiter</div>
-            <div class="for-whom-divider"></div>
-            <p style="font-size: 0.85rem; color: var(--light); max-width: 22ch; margin: 0 auto; line-height: 1.65;">
-              Genau diese Größe profitiert am stärksten von einem skalierbaren digitalen Akquise-System.
-            </p>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+          <a class="google-badge" href="https://maps.app.goo.gl/ANfL4DQBBjgcU15x5?g_st=ic" target="_blank" rel="noopener">
+            <svg class="google-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+</svg>
+            <div>
+              <div class="google-rating-num">4.9</div>
+              <div class="google-stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="google-label">Google Bewertungen</div>
+            </div>
+          </a>
+          <div class="slider-controls">
+            <button class="slider-btn" onclick="slideReviews(-1)">&larr;</button>
+            <button class="slider-btn" onclick="slideReviews(1)">&rarr;</button>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- CTA BAND -->
-  <div class="cta-section">
-    <div class="wrap">
-      <div class="cta-inner">
-        <div>
-          <h2 class="h2">Wie viele Eigentümer in Ihrer Region sehen Sie heute nicht?</h2>
-          <p style="margin-top: 10px; font-size: 0.95rem;">30 Minuten. Kostenlos. Mit konkreten Zahlen für Ihr Gebiet.</p>
+      <div class="reviews-track-wrap">
+        <div class="reviews-track" id="reviews-track">
+          <div class="review-card">
+  <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  <div class="rc-text">&#8222;Seit Jahren verlasslicher Partner fuer unsere zeitkritischen Sendungen. Was uns ueberzeugt hat: ein echter Ansprechpartner, der unsere Anforderungen kennt und sofort reagiert.&#8220;</div>
+  <div class="rc-author">M. Schneider</div>
+  <div class="rc-role">Produktionsleiter, Dresden</div>
+  <div class="rc-google"><svg class="rc-google-icon" viewBox="0 0 24 24">
+  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+</svg><span class="rc-google-text">Bewertet auf Google</span></div>
+</div>
+          <div class="review-card">
+  <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  <div class="rc-text">&#8222;Beim internationalen Versand sparen wir mit MAILEXPRESS deutlich gegenueber unserem vorherigen Anbieter - bei gleichzeitig besserem Service. Klare Empfehlung fuer Industriekunden.&#8220;</div>
+  <div class="rc-author">T. Hoffmann</div>
+  <div class="rc-role">Geschaeftsfuehrer, Leipzig</div>
+  <div class="rc-google"><svg class="rc-google-icon" viewBox="0 0 24 24">
+  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+</svg><span class="rc-google-text">Bewertet auf Google</span></div>
+</div>
+          <div class="review-card">
+  <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  <div class="rc-text">&#8222;Wir beauftragen MAILEXPRESS mehrfach taeglich. Die Abwicklung ist unkompliziert, die Preise fair - und ich weiss, wen ich anrufe, wenn etwas ist.&#8220;</div>
+  <div class="rc-author">S. Braun</div>
+  <div class="rc-role">Einkaufsleitung, Sachsen</div>
+  <div class="rc-google"><svg class="rc-google-icon" viewBox="0 0 24 24">
+  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+</svg><span class="rc-google-text">Bewertet auf Google</span></div>
+</div>
+          <div class="review-card">
+  <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  <div class="rc-text">&#8222;Kurze Wege, schnelle Reaktion, faire Konditionen. Genau das, was man von einem lokalen Kurierdienst erwartet - aber selten bekommt.&#8220;</div>
+  <div class="rc-author">K. Mueller</div>
+  <div class="rc-role">Logistikleiter, Dresden</div>
+  <div class="rc-google"><svg class="rc-google-icon" viewBox="0 0 24 24">
+  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+</svg><span class="rc-google-text">Bewertet auf Google</span></div>
+</div>
+          <div class="review-card">
+  <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  <div class="rc-text">&#8222;Zeitkritische Sendungen, die garantiert ankommen muessen - dafuer ist MAILEXPRESS genau richtig. Professionell, verlasslich und immer erreichbar.&#8220;</div>
+  <div class="rc-author">R. Fischer</div>
+  <div class="rc-role">Betriebsleiter, Sachsen</div>
+  <div class="rc-google"><svg class="rc-google-icon" viewBox="0 0 24 24">
+  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+</svg><span class="rc-google-text">Bewertet auf Google</span></div>
+</div>
         </div>
-        <button class="btn-primary" onclick="goContact()">Erstgespräch anfragen</button>
+      </div>
+      <div class="slider-dots" id="review-dots">
+        <div class="slider-dot active" onclick="goToReview(0)"></div>
+        <div class="slider-dot" onclick="goToReview(1)"></div>
+        <div class="slider-dot" onclick="goToReview(2)"></div>
+      </div>
+      <div style="text-align:center;margin-top:28px">
+        <a href="https://maps.app.goo.gl/ANfL4DQBBjgcU15x5?g_st=ic" target="_blank" rel="noopener" class="btn btn-outline" style="margin:0 auto">Alle Google-Bewertungen ansehen &rarr;</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- CONTACT -->
-  <div class="contact-section" id="contact">
-    <div class="wrap">
-      <p class="label">Kontakt</p>
-      <h2 class="h2">Kostenloses Erstgespräch anfragen.</h2>
-
-      <div class="contact-grid">
-        <div>
-          <p class="contact-info-text">
-            In einem ersten, kostenfreien Gespräch analysieren wir das digitale Potenzial in Ihrer Region. Sie erhalten eine ehrliche Einschätzung — ohne Verkaufsdruck, ohne leere Versprechen.
-          </p>
-          <div class="info-item"><div class="lbl">Dauer</div><div class="val">ca. 30 Minuten</div></div>
-          <div class="info-item"><div class="lbl">Format</div><div class="val">Videocall oder Telefon</div></div>
-          <div class="info-item"><div class="lbl">Kosten</div><div class="val">Kostenlos und unverbindlich</div></div>
-        </div>
-
-        <form onsubmit="return false">
-          <div class="f-group"><label>Vor- und Nachname</label><input type="text" placeholder="Max Mustermann"></div>
-          <div class="f-group"><label>E-Mail-Adresse</label><input type="email" placeholder="max@mustermakler.de"></div>
-          <div class="f-group"><label>Ihr Fokusgebiet</label><input type="text" placeholder="z. B. Bayreuth und Umgebung"></div>
-          <div class="f-group">
-            <label>Aktuelle Mandate pro Monat</label>
-            <select>
-              <option value="">Bitte wählen …</option>
-              <option>1 bis 2 Mandate</option>
-              <option>3 bis 5 Mandate</option>
-              <option>6 bis 10 Mandate</option>
-              <option>Mehr als 10 Mandate</option>
-            </select>
-          </div>
-          <button class="btn-primary" style="width: 100%; margin-top: 4px;" type="submit">Gespräch anfragen →</button>
-          <p class="f-hint">Keine Datenweitergabe. Kein Spam.</p>
-        </form>
-      </div>
+  <div class="cta-band">
+    <h2>Bereit loszulegen?</h2>
+    <p>Ruf uns an oder schick uns eine Anfrage - wir melden uns schnell zurueck.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary btn-lg" style="background:#fff;color:var(--o)" onclick="go('kontakt')">Anfrage stellen</a>
+      <a class="btn btn-ghost-light btn-lg" href="tel:+493514383482">+49 351 438 348 20</a>
     </div>
   </div>
-
-  <footer>
-    <div class="f-logo">MarketingGründer</div>
-    <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">AGB</a></div>
-    <div class="f-copy">© 2025 marketing-gruender.de</div>
-  </footer>
-
 </div><!-- /home -->
 
+<!-- ══ LEISTUNGEN ══ -->
+<div id="p-leist" class="page">
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-eyebrow">Alle Leistungen im Detail</div>
+    <h1>Das richtige Produkt<br>fuer jede Sendung.</h1>
+    <p class="lead">Fuenf Dienste - klare Preise, genaue Specs. Ob zeitkritisch, kostenoptimiert oder weltweit.</p>
+  </div></div>
+  <section><div class="wrap">
 
-<!-- ═══════════════ CASE STUDY ═══════════════ -->
-<div id="page-case" class="page pt">
-
-  <div class="case-hero">
-    <div class="case-hero-inner">
-      <p class="case-tag">Fallstudie — Einzelmakler, Bayern</p>
-      <h1>Vom Empfehlungsmakler zum digitalen Marktführer.</h1>
-      <p class="lead">Wie ein Einzelmakler in Bayern innerhalb von 12 Monaten 11 neue Verkaufsmandate über digitale Kanäle gewann — ohne Kaltakquise, ohne Empfehlungsnetzwerk.</p>
-    </div>
-  </div>
-
-  <div class="kpi-strip">
-    <div class="kpi-strip-inner">
-      <div class="kpi-item"><div class="kpi-num">353</div><div class="kpi-lbl">Qualifizierte Anfragen<br>in 12 Monaten</div></div>
-      <div class="kpi-item"><div class="kpi-num">11</div><div class="kpi-lbl">Unterschriebene<br>Verkaufsmandate</div></div>
-      <div class="kpi-item"><div class="kpi-num">~65 €</div><div class="kpi-lbl">Kosten pro Lead<br>(Phase 2)</div></div>
-      <div class="kpi-item"><div class="kpi-num">~385 T€</div><div class="kpi-lbl">Generierte<br>Provision gesamt</div></div>
-    </div>
-  </div>
-
-  <div class="case-body">
-
-    <h2>Ausgangssituation</h2>
-    <p>Stefan M. ist Immobilienmakler mit Fokus auf Wohnimmobilien in einer bayerischen Mittelstadt. Sieben Jahre selbstständig, solide Provision, guter Ruf — und trotzdem ein Unternehmen, das vollständig von Empfehlungen abhängig war.</p>
-    <p>Gute Monate folgten auf schlechte, ohne Muster und ohne Planbarkeit. Die Frage, wie viel Umsatz das nächste Quartal bringt, konnte er nicht beantworten.</p>
-
-    <div class="pull">
-      <p>„Ich hatte ein gutes Jahr hinter mir — aber ich wusste nicht, ob nächstes Jahr genauso wird. Das war das, was mich nachts wach hielt."</p>
-      <cite>Stefan M., Immobilienmakler</cite>
-    </div>
-
-    <h2>Herausforderung</h2>
-    <p>Stefan ist ein guter Makler — das Problem lag nicht im Gespräch, sondern davor. Er kam schlicht nicht regelmäßig genug in Kontakt mit Eigentümern, die ernsthaft verkaufen wollen. Das Netzwerk stagnierte, eine Website ohne System brachte keine Anfragen.</p>
-
-    <h2>Lösung</h2>
-    <p>Wir starteten mit einer regionalen Marktanalyse. Das ungenutzte Potenzial in Stefans Fokusgebiet war erheblich: mehrere Hundert Verkaufsobjekte pro Jahr, von denen er digital unsichtbar war.</p>
-    <p>In Phase 1 (3 Monate) legten wir das Fundament: Zielgruppenanalyse, Aufbau der ersten Kampagnen und einer Landingpage für kostenfreie Immobilienbewertungen. In Phase 2 (9 Monate) verfeinerten wir auf Qualität: gezieltere Segmentierung, höhere Abschlussquote.</p>
-
-    <h2>Ergebnisse</h2>
-    <div class="result-strip">
-      <div class="rs-item"><div class="rs-num">56</div><div class="rs-lbl">Leads in Monat 1–3<br>2 Mandate → ~56.000 €</div></div>
-      <div class="rs-item"><div class="rs-num">297</div><div class="rs-lbl">Leads in Monat 4–12<br>9 Mandate → ~329.000 €</div></div>
-      <div class="rs-item"><div class="rs-num">+100 %</div><div class="rs-lbl">Steigerung des<br>digitalen Marktanteils</div></div>
-    </div>
-
-    <p>Gesamtinvestment über 12 Monate: rund 67.000 €. Generierte Provision: rund 385.000 €. Stefan hat heute einen Akquise-Kanal, den er steuern kann — unabhängig vom Empfehlungsnetzwerk.</p>
-
-    <div class="pull">
-      <p>„Ich hatte 11 neue Mandate, die ich ohne das System nie gehabt hätte. Und ich weiß, dass nächsten Monat wieder welche kommen. Das ist das Entscheidende."</p>
-      <cite>Stefan M., Immobilienmakler</cite>
-    </div>
-
-    <div style="margin-top: 40px; display: flex; gap: 12px; flex-wrap: wrap;">
-      <button class="btn-primary" onclick="goContact()">Erstgespräch anfragen →</button>
-      <button class="btn-secondary" onclick="showPage('home')">Zur Startseite</button>
-    </div>
-  </div>
-
-  <footer>
-    <div class="f-logo">MarketingGründer</div>
-    <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
-    <div class="f-copy">© 2025 marketing-gruender.de</div>
-  </footer>
-
-</div><!-- /case -->
-
-
-<!-- ═══════════════ BLOG OVERVIEW ═══════════════ -->
-<div id="page-blog" class="page pt">
-
-  <div class="blog-hero">
-    <div class="wrap">
-      <p class="label">Wissen & Einblicke</p>
-      <h1>Praxis-Wissen für Immobilienmakler.</h1>
-      <p>Keine Theorie. Nur konkrete Erkenntnisse aus unserer täglichen Arbeit — was funktioniert, was nicht, und warum.</p>
-    </div>
-  </div>
-
-  <div class="blog-layout">
-    <div>
-      <div class="feat-article" onclick="showPage('post')">
-        <div class="feat-thumb">
-          <div class="feat-thumb-text">
-            <p class="art-tag" style="color: var(--gold); margin-bottom: 6px;">Strategie</p>
-            <h2>Warum Empfehlungen allein kein Geschäftsmodell sind — und was Makler stattdessen brauchen</h2>
-          </div>
+    <div class="leist-item">
+      <div class="leist-visual"><div class="leist-icon">&#128663;</div><div class="leist-vis-label">MEX Kurierfahrt</div><div class="price-bubble">ab 8,00 &euro;</div></div>
+      <div>
+        <div class="leist-badge">Sofortservice &middot; Ganz Europa</div>
+        <h2 class="leist-title">MEX Kurierfahrt</h2>
+        <p class="leist-text">Die schnellste Verbindung zwischen zwei Punkten: Ein Fahrzeug, ein Fahrer, ein direkter Weg - ohne Umladen, ohne Zwischenstopps. Je nach Bedarf setzen wir das optimale Fahrzeug ein.</p>
+        <div class="leist-specs"><div class="leist-specs-title">Leistungsmerkmale</div>
+          <div class="lsr"><span class="lsk">Transportgut</span><span class="lsv">Dokumente &amp; Waren, keine Mengenbeschraenkung</span></div>
+          <div class="lsr"><span class="lsk">Ziele</span><span class="lsv">Alle Orte in Europa</span></div>
+          <div class="lsr"><span class="lsk">Abholzeit</span><span class="lsv">Nach deinem Wunsch - auch nachts und am Wochenende</span></div>
+          <div class="lsr"><span class="lsk">Lieferzeit</span><span class="lsv">Sofort im Anschluss, je nach Strecke</span></div>
+          <div class="lsr"><span class="lsk">Fahrzeuge</span><span class="lsv">Fahrrad, PKW, Transporter, LKW mit Hebebuehne</span></div>
+          <div class="lsr"><span class="lsk">Preis</span><span class="lsv">Ab 8,00 &euro; - individuelle Angebote auf Anfrage</span></div>
         </div>
-        <p class="art-meta">12. März 2025 · 7 Min. Lesezeit</p>
-        <p class="art-excerpt">Fast jeder Makler hat sein Unternehmen auf Empfehlungen aufgebaut. Das ist gut — aber es reicht nicht. Hier erfahren Sie, warum und was sich konkret ändern sollte.</p>
-        <button class="read-btn">Artikel lesen</button>
+        <a class="btn btn-primary btn-lg" onclick="go('kontakt')">Kurierfahrt anfragen &rarr;</a>
       </div>
     </div>
 
-    <div>
-      <div class="sidebar-title">Weitere Artikel</div>
-      <div class="s-article"><p class="art-tag">Leadgenerierung</p><h4>Was ein qualifizierter Lead wirklich kostet — und was er bringen sollte</h4><p class="art-meta" style="margin-top: 4px;">28. Feb. 2025 · 5 Min.</p></div>
-      <div class="s-article"><p class="art-tag">Werbeanzeigen</p><h4>Meta oder Google: Wo Immobilienmakler ihr Budget richtig einsetzen</h4><p class="art-meta" style="margin-top: 4px;">14. Feb. 2025 · 6 Min.</p></div>
-      <div class="s-article"><p class="art-tag">Objektvermarktung</p><h4>Objekte digital vermarkten: Wie Sie über Portale hinaus Käufer erreichen</h4><p class="art-meta" style="margin-top: 4px;">3. Feb. 2025 · 5 Min.</p></div>
-      <div class="s-article"><p class="art-tag">Praxis</p><h4>Eigentümer ansprechen, bevor sie aktiv suchen: vorausschauende Akquise</h4><p class="art-meta" style="margin-top: 4px;">7. Jan. 2025 · 5 Min.</p></div>
+    <div class="leist-item rev">
+      <div class="leist-visual" style="background:linear-gradient(135deg,var(--bls),var(--bl))"><div class="leist-icon">&#127758;</div><div class="leist-vis-label">MEX International</div><div class="price-bubble">ab 30,00 &euro;</div></div>
+      <div>
+        <div class="leist-badge blue">&#11088; Unser staerkster Dienst</div>
+        <h2 class="leist-title">MEX International</h2>
+        <p class="leist-text">Unser staerkster Bereich mit den besten Konditionen. Wir versenden weltweit und bieten Industriekunden echte Einsparungen gegenueber DHL, UPS und FedEx - nicht weil wir kleiner sind, sondern weil wir smarter einkaufen.</p>
+        <div class="leist-specs"><div class="leist-specs-title">Leistungsmerkmale</div>
+          <div class="lsr"><span class="lsk">Transportgut</span><span class="lsv">Bis 6 m, bis 500 kg</span></div>
+          <div class="lsr"><span class="lsk">Ziele</span><span class="lsv">Weltweit - alle gaengigen Destinationen</span></div>
+          <div class="lsr"><span class="lsk">Abholzeit</span><span class="lsv">Taeglich bis 20:00 Uhr</span></div>
+          <div class="lsr"><span class="lsk">Lieferzeit</span><span class="lsv">Ab dem naechsten Arbeitstag - je nach Ziel</span></div>
+          <div class="lsr"><span class="lsk">Transportmittel</span><span class="lsv">Flugzeug, Schiff, LKW - je nach Ziel und Bedarf</span></div>
+          <div class="lsr"><span class="lsk">Preis</span><span class="lsv">Ab 30,00 &euro; - deutlich guenstiger als DHL/UPS</span></div>
+        </div>
+        <a class="btn btn-primary btn-lg" onclick="go('kontakt')">International anfragen &rarr;</a>
+      </div>
+    </div>
+
+    <div class="leist-item">
+      <div class="leist-visual"><div class="leist-icon">&#9992;</div><div class="leist-vis-label">MEX Sameday</div><div class="price-bubble">ab 150,00 &euro;</div></div>
+      <div>
+        <div class="leist-badge">Taggleich &middot; EU-Ballungsraeume</div>
+        <h2 class="leist-title">MEX Sameday</h2>
+        <p class="leist-text">Schnell ueber weite Distanzen ohne die Kosten einer Direktfahrt: MEX Sameday kombiniert Schienen- und Luftwege mit lokaler Fahrzeuglogistik. EU-Ziele ab 200 km in der Regel noch am selben Tag.</p>
+        <div class="leist-specs"><div class="leist-specs-title">Leistungsmerkmale</div>
+          <div class="lsr"><span class="lsk">Transportgut</span><span class="lsv">Bis 20 kg, bis 1,20 m Laenge</span></div>
+          <div class="lsr"><span class="lsk">Ziele</span><span class="lsv">EU-Wirtschaftsregionen ab 200 km</span></div>
+          <div class="lsr"><span class="lsk">Abholzeit</span><span class="lsv">Nach deinem Wunsch</span></div>
+          <div class="lsr"><span class="lsk">Lieferzeit</span><span class="lsv">Ab 3 Stunden - je nach Verbindung</span></div>
+          <div class="lsr"><span class="lsk">Transportmittel</span><span class="lsv">Flugzeug oder Bahn + lokaler Kurier</span></div>
+          <div class="lsr"><span class="lsk">Preis</span><span class="lsv">Ab 150,00 &euro;</span></div>
+        </div>
+        <a class="btn btn-primary btn-lg" onclick="go('kontakt')">Sameday anfragen &rarr;</a>
+      </div>
+    </div>
+
+    <div class="leist-item rev">
+      <div class="leist-visual"><div class="leist-icon">&#9889;</div><div class="leist-vis-label">MEX Express</div><div class="price-bubble">ab 8,00 &euro;</div></div>
+      <div>
+        <div class="leist-badge">Overnight-Garantie &middot; Deutschlandweit</div>
+        <h2 class="leist-title">MEX Express</h2>
+        <p class="leist-text">Abholung noch am Abend, garantierte Zustellung am naechsten Werktag ab 8 Uhr. Fuer Unternehmen, bei denen Produktionsprozesse von puenktlichem Materialeingang abhaengen. Auch fuer sperrige Gueter bis 6 m und 500 kg.</p>
+        <div class="leist-specs"><div class="leist-specs-title">Leistungsmerkmale</div>
+          <div class="lsr"><span class="lsk">Transportgut</span><span class="lsv">Bis 6 m Laenge, bis 500 kg</span></div>
+          <div class="lsr"><span class="lsk">Ziele</span><span class="lsv">Deutschlandweit</span></div>
+          <div class="lsr"><span class="lsk">Abholzeit</span><span class="lsv">Werktags bis 20:00 Uhr</span></div>
+          <div class="lsr"><span class="lsk">Zustellung</span><span class="lsv">Naechster Werktag ab 08:00 Uhr (Garantiezeit)</span></div>
+          <div class="lsr"><span class="lsk">Preis</span><span class="lsv">Ab 8,00 &euro; - nach Strecke und Gewicht</span></div>
+        </div>
+        <a class="btn btn-primary btn-lg" onclick="go('kontakt')">Express anfragen &rarr;</a>
+      </div>
+    </div>
+
+    <div class="leist-item">
+      <div class="leist-visual"><div class="leist-icon">&#128230;</div><div class="leist-vis-label">MEX Paket</div><div class="price-bubble">ab 6,00 &euro;</div></div>
+      <div>
+        <div class="leist-badge">Standardversand &middot; Deutschlandweit</div>
+        <h2 class="leist-title">MEX Paket</h2>
+        <p class="leist-text">Guenstig und zuverlaessig in 1-3 Werktagen. Fuer Unternehmen mit konstantem Versandaufkommen bieten wir Rahmenvertraege mit Festpreisen. Wir rechnen dir gerne durch, was du sparst.</p>
+        <div class="leist-specs"><div class="leist-specs-title">Leistungsmerkmale</div>
+          <div class="lsr"><span class="lsk">Transportgut</span><span class="lsv">Bis 70 kg/Paket, Sendungen bis 500 kg gesamt</span></div>
+          <div class="lsr"><span class="lsk">Ziele</span><span class="lsv">Deutschlandweit</span></div>
+          <div class="lsr"><span class="lsk">Abholzeit</span><span class="lsv">Jeden Arbeitstag bis 20:00 Uhr</span></div>
+          <div class="lsr"><span class="lsk">Laufzeit</span><span class="lsv">1-3 Arbeitstage</span></div>
+          <div class="lsr"><span class="lsk">Preis</span><span class="lsv">Ab 6,00 &euro; - Rahmenvertraege auf Anfrage</span></div>
+        </div>
+        <a class="btn btn-primary btn-lg" onclick="go('kontakt')">Paket anfragen &rarr;</a>
+      </div>
+    </div>
+
+  </div></section>
+  <div class="cta-band">
+    <h2>Nicht sicher, welcher Dienst passt?</h2>
+    <p>Ruf uns an - wir finden gemeinsam die beste Loesung fuer deine Sendung.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary btn-lg" style="background:#fff;color:var(--o)" href="tel:+493514383482">+49 351 438 348 20</a>
+      <a class="btn btn-ghost-light btn-lg" onclick="go('kontakt')">Anfrage per Formular</a>
     </div>
   </div>
+</div><!-- /leist -->
 
-  <footer>
-    <div class="f-logo">MarketingGründer</div>
-    <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
-    <div class="f-copy">© 2025 marketing-gruender.de</div>
-  </footer>
+<!-- ══ UEBER UNS ══ -->
+<div id="p-ueber" class="page">
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-eyebrow">Ueber MAILEXPRESS</div>
+    <h1>Seit 24 Jahren.<br>Persoenlich.<br>Zuverlaessig.</h1>
+    <p class="lead">Wir sind kein anonymer Paketdienstleister. Wir sind ein Team aus Dresden - mit echten Ansprechpartnern und fairen Preisen.</p>
+  </div></div>
 
+  <section>
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat-item"><div class="stat-num">24<em>J</em></div><div class="stat-label">Jahre Erfahrung in der Logistik</div></div>
+        <div class="stat-item"><div class="stat-num">60<em>k+</em></div><div class="stat-label">Pakete zugestellt pro Jahr</div></div>
+        <div class="stat-item"><div class="stat-num">250</div><div class="stat-label">Sendungen taeglich</div></div>
+        <div class="stat-item"><div class="stat-num">2<em>Spr.</em></div><div class="stat-label">Verfuegbar auf Deutsch und Englisch</div></div>
+      </div>
+      <div class="split">
+        <div class="split-visual"><div class="split-visual-icon">&#127961;</div><div class="split-visual-label">Zwickauer Str. 72-74, Dresden</div></div>
+        <div class="split-body">
+          <div class="label label-b">Das Unternehmen</div>
+          <h2 class="sh2">Verwurzelt in Dresden, aktiv weltweit</h2>
+          <p>MAILEXPRESS Logistik GmbH sitzt in der Zwickauer Strasse 72-74 in Dresden und ist seit 24 Jahren einer der verlasslichsten Kurierdienste in der Region.</p>
+          <p>Unser staerkster Bereich ist der internationale Versand: Industriekunden erzielen mit uns echte Einsparungen - bei persoenlicherem Service als bei den grossen Anbietern.</p>
+          <ul class="checklist">
+            <li>Registriert beim Amtsgericht Dresden - HRB 23402</li>
+            <li>Direkter Draht zur Disposition: dispo@mailexpress.de</li>
+            <li>Verfuegbar auf Deutsch und Englisch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--off)">
+    <div class="wrap">
+      <div class="section-intro">
+        <div class="label label-o">Geschaeftsfuehrung</div>
+        <h2 class="sh2">Die Koepfe hinter MAILEXPRESS</h2>
+        <p class="sub">Beide Geschaeftsfuehrer sind operativ taetig und direkt erreichbar.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo"><div class="team-av">AM</div></div>
+          <div class="team-info">
+            <div class="team-name">Alexander Metzig</div>
+            <div class="team-role">Geschaeftsfuehrer</div>
+            <div class="team-bio">Mitgruender und Geschaeftsfuehrer der MAILEXPRESS Logistik GmbH. Verantwortlich fuer Strategie und Partnerbeziehungen. Direkt erreichbar: info@mailexpress.de</div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo"><div class="team-av">MD</div></div>
+          <div class="team-info">
+            <div class="team-name">Mark-Peter Drescher</div>
+            <div class="team-role">Geschaeftsfuehrer</div>
+            <div class="team-bio">Leitet das operative Tagesgeschaeft: Auftragsabwicklung, Fahrerkoordination und Qualitaetssicherung aller Transporte. Direkt erreichbar: dispo@mailexpress.de</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="wrap">
+      <div class="section-intro">
+        <div class="label label-w">Unsere Werte</div>
+        <h2 class="sh2 sh2-light">Was uns seit Tag 1 antreibt</h2>
+        <p class="sub sub-light">Logistik ist Vertrauen. Wir arbeiten nach Grundsaetzen, die wir taeglich selbst einhalten.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon-svg"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div class="value-title">Persoenlich</div>
+          <div class="value-text">Du bekommst einen festen Ansprechpartner, der deinen Auftrag kennt - von der Abholung bis zur Zustellung.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon-svg"><svg viewBox="0 0 24 24"><polyline points="13 2 13 9 20 9"/><path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h9l8 8v3z"/></svg></div>
+          <div class="value-title">Unkompliziert</div>
+          <div class="value-text">Auftrag erteilen, fertig. Kein Papierkram, keine unnoetigen Schritte.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon-svg"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="value-title">Fair</div>
+          <div class="value-text">Transparente Preise ohne versteckte Kosten. Besonders im internationalen Versand bieten wir bessere Konditionen.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon-svg"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="value-title">Zuverlaessig</div>
+          <div class="value-text">60.000+ Pakete pro Jahr. Wenn wir eine Zusage machen, halten wir sie - auch kurzfristig, auch abends.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>Ueberzeu g dich selbst.</h2>
+    <p>Ein kurzes Gespraech zeigt dir, ob MAILEXPRESS zu deinem Unternehmen passt.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary btn-lg" style="background:#fff;color:var(--o)" onclick="go('kontakt')">Kontakt aufnehmen</a>
+      <a class="btn btn-ghost-light btn-lg" href="tel:+493514383482">+49 351 438 348 20</a>
+    </div>
+  </div>
+</div><!-- /ueber -->
+
+<!-- ══ BLOG ══ -->
+<div id="p-blog" class="page">
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-eyebrow">Blog &amp; Ratgeber</div>
+    <h1>Wissen. Tipps.<br>Logistik aus der Praxis.</h1>
+    <p class="lead">Praktische Ratgeber rund um Versand und internationalen Transport - aus 24 Jahren Erfahrung.</p>
+  </div></div>
+  <section><div class="wrap">
+    <div class="section-intro">
+      <div class="label label-o">Aktuelle Beitraege</div>
+      <h2 class="sh2">Aus dem MEX-Blog</h2>
+      <p class="sub">Bald erscheinen hier unsere ersten Beitraege zu Versandtipps, Branchennews und Logistik-Wissen.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-thumb t1">&#127758;</div>
+        <div class="blog-body">
+          <div class="blog-category">Internationaler Versand</div>
+          <div class="blog-title">Warum du beim internationalen Versand oft zu viel zahlst</div>
+          <div class="blog-excerpt">Was DHL, UPS und FedEx dir nicht sagen - und wie du mit dem richtigen Partner bis zu 30 % sparen kannst.</div>
+          <div class="blog-meta">Demnaechst verfuegbar</div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb t2">&#9889;</div>
+        <div class="blog-body">
+          <div class="blog-category">Same-Day-Versand</div>
+          <div class="blog-title">Same-Day-Lieferung fuer Industriebetriebe</div>
+          <div class="blog-excerpt">Wenn Produktionsstopps drohen, zaehlt jede Stunde. Wie MEX Sameday genau fuer diese Situation gemacht ist.</div>
+          <div class="blog-meta">Demnaechst verfuegbar</div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb t3">&#128230;</div>
+        <div class="blog-body">
+          <div class="blog-category">Verpackung &amp; Tipps</div>
+          <div class="blog-title">Richtig verpacken: Was bei beschaedigter Ware zaehlt</div>
+          <div class="blog-excerpt">Verpackungsfehler sind die haeufigste Ursache fuer Transportschaeden. Unser Leitfaden zeigt, worauf du achten musst.</div>
+          <div class="blog-meta">Demnaechst verfuegbar</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:72px;background:var(--b);border-radius:var(--rxl);padding:48px 52px;display:flex;align-items:center;gap:48px;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:700;color:#fff;margin-bottom:10px">Newsletter abonnieren</div>
+        <p style="color:rgba(255,255,255,.55);font-size:15px;font-weight:300;margin:0">Neue Artikel und Logistik-Tipps direkt in dein Postfach.</p>
+      </div>
+      <div style="display:flex;gap:0;flex:1;min-width:280px;border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.2)">
+        <input type="email" placeholder="deine@email.de" style="flex:1;padding:0 18px;height:48px;border:none;outline:none;font-family:'Source Sans 3',sans-serif;font-size:14.5px">
+        <button onclick="toast('Danke! Du wirst benachrichtigt.')" style="height:48px;padding:0 22px;background:var(--o);color:#fff;border:none;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:14px">Anmelden</button>
+      </div>
+    </div>
+  </div></section>
 </div><!-- /blog -->
 
+<!-- ══ KONTAKT ══ -->
+<div id="p-kontakt" class="page">
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-eyebrow">Kontakt &amp; Auftrag</div>
+    <h1>Wir freuen uns<br>von dir zu hoeren.</h1>
+    <p class="lead">Ruf uns direkt an oder schick uns deine Anfrage - wir antworten schnell.</p>
+  </div></div>
+  <section><div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-title">Direktkontakt</div>
+        <div class="cinfo-block"><div class="cinfo-icon">&#128222;</div><div><div class="cinfo-label">Telefon (Disposition)</div><div class="cinfo-value"><a href="tel:+493514383482">+49 (0)351 - 438 348 20</a></div></div></div>
+        <div class="cinfo-block"><div class="cinfo-icon">&#128226;</div><div><div class="cinfo-label">Telefax</div><div class="cinfo-value">+49 (0)351 - 438 348 21</div></div></div>
+        <div class="cinfo-block"><div class="cinfo-icon">&#9993;</div><div><div class="cinfo-label">E-Mail Auftraege</div><div class="cinfo-value"><a href="mailto:dispo@mailexpress.de">dispo@mailexpress.de</a></div></div></div>
+        <div class="cinfo-block"><div class="cinfo-icon">&#128231;</div><div><div class="cinfo-label">E-Mail Allgemein</div><div class="cinfo-value"><a href="mailto:info@mailexpress.de">info@mailexpress.de</a></div></div></div>
+        <div class="cinfo-block"><div class="cinfo-icon">&#128205;</div><div><div class="cinfo-label">Postadresse</div><div class="cinfo-value">MAILEXPRESS Logistik GmbH<br>Zwickauer Str. 72-74<br>D-01187 Dresden</div></div></div>
+        <div style="background:var(--off);border-radius:var(--rl);padding:28px;margin-top:24px;border:1px solid var(--bd)">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px">Sendung verfolgen</div>
+          <p style="color:var(--t2);font-size:14px;line-height:1.65;margin-bottom:16px">Sendungsnummer eingeben oder direkt anrufen.</p>
+          <div style="display:flex;gap:0;border-radius:var(--r);overflow:hidden;border:1.5px solid var(--bd)">
+            <input id="ti2" type="text" placeholder="Sendungsnummer ..." style="flex:1;padding:11px 15px;border:none;outline:none;font-family:'Source Sans 3',sans-serif;font-size:14px">
+            <button class="btn btn-dark" onclick="doTrack('ti2')" style="border-radius:0">Suchen</button>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="cf-title">Auftrag / Anfrage</div>
+        <div class="cf-sub">Alle markierten Felder sind Pflichtfelder. Wir melden uns schnell zurueck.</div>
+        <div class="form-row">
+          <div class="fg"><label>Firma / Name *</label><input type="text" placeholder="Muster GmbH"></div>
+          <div class="fg"><label>Telefon</label><input type="tel" placeholder="+49 ..."></div>
+        </div>
+        <div class="fg"><label>E-Mail *</label><input type="email" placeholder="name@firma.de"></div>
+        <div class="fg"><label>Gewuenschter Dienst</label>
+          <select>
+            <option value="">Bitte waehlen ...</option>
+            <option>MEX Kurierfahrt (ab 8,00 &euro;)</option>
+            <option>MEX Sameday (ab 150,00 &euro;)</option>
+            <option>MEX Express (ab 8,00 &euro;)</option>
+            <option>MEX International (ab 30,00 &euro;)</option>
+            <option>MEX Paket (ab 6,00 &euro;)</option>
+            <option>Ich bin unsicher - bitte beraten</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Abholort / PLZ</label><input type="text" placeholder="z.B. 01187 Dresden"></div>
+          <div class="fg"><label>Zielort / Land</label><input type="text" placeholder="z.B. Hamburg, Wien ..."></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Gewicht (ca.)</label><input type="text" placeholder="z.B. 5 kg"></div>
+          <div class="fg"><label>Wunschtermin</label><input type="date"></div>
+        </div>
+        <div class="fg"><label>Deine Nachricht</label><textarea rows="4" placeholder="Sendungsgut, besondere Anforderungen ..."></textarea></div>
+        <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="toast('Deine Anfrage wurde gesendet! Wir melden uns bald.')">Anfrage absenden &rarr;</button>
+        <p style="color:var(--t3);font-size:12px;margin-top:12px;line-height:1.6">* Deine Daten werden ausschliesslich zur Auftragsbearbeitung verwendet.</p>
+      </div>
+    </div>
+  </div></section>
+</div><!-- /kontakt -->
 
-<!-- ═══════════════ BLOG POST ═══════════════ -->
-<div id="page-post" class="page pt">
-
-  <div class="post-hero">
-    <div class="post-hero-in">
-      <p class="art-tag" style="margin-bottom: 14px;">Strategie</p>
-      <h1>Warum Empfehlungen allein kein Geschäftsmodell sind — und was Immobilienmakler stattdessen brauchen</h1>
-      <p class="meta" style="margin-top: 16px;">12. März 2025 · 7 Min. Lesezeit</p>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" onclick="go('home')" style="filter:brightness(0) invert(1)"><svg viewBox="0 0 218 66" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2,48 L2,18 L10,18 L18,32 L26,18 L34,18 L34,48 L26,48 L26,30 L18,43 L10,30 L10,48 Z" fill="#F47A20"/>
+  <path d="M38,48 L38,18 L62,18 L62,25 L46,25 L46,31 L61,31 L61,37 L46,37 L46,41 L62,41 L62,48 Z" fill="#F47A20"/>
+  <path d="M66,18 L76,18 L84,30 L92,18 L102,18 L89,33 L103,48 L92,48 L84,36 L76,48 L65,48 L79,33 Z" fill="#F47A20"/>
+  <polygon points="112,14 136,8 136,40 112,46" fill="rgba(255,255,255,.70)"/>
+  <polygon points="112,14 136,8 152,18 128,24" fill="rgba(255,255,255,.92)"/>
+  <polygon points="136,8 152,18 152,48 136,40" fill="rgba(255,255,255,.48)"/>
+  <text x="2" y="62" font-family="'Franklin Gothic Medium','Arial Narrow','Arial',sans-serif" font-weight="700" font-size="15" fill="rgba(255,255,255,.70)" letter-spacing="2.8">mailexpress</text>
+</svg></div>
+      <p>MAILEXPRESS Logistik GmbH<br>Zwickauer Str. 72-74 &middot; 01187 Dresden<br>Seit 24 Jahren dein persoenlicher Kurierdienst.</p>
+    </div>
+    <div class="footer-col"><h4>Leistungen</h4><ul>
+      <li><a onclick="go('leist')">MEX Kurierfahrt</a></li>
+      <li><a onclick="go('leist')">MEX Sameday</a></li>
+      <li><a onclick="go('leist')">MEX Express</a></li>
+      <li><a onclick="go('leist')">MEX International</a></li>
+      <li><a onclick="go('leist')">MEX Paket</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Unternehmen</h4><ul>
+      <li><a onclick="go('ueber')">Ueber uns</a></li>
+      <li><a onclick="go('ueber')">Geschaeftsfuehrung</a></li>
+      <li><a onclick="go('blog')">Blog</a></li>
+      <li><a onclick="toast('Impressum folgt')">Impressum</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Kontakt</h4><ul>
+      <li><a href="tel:+493514383482">+49 351 438 348 20</a></li>
+      <li><a href="mailto:dispo@mailexpress.de">dispo@mailexpress.de</a></li>
+      <li><a href="mailto:info@mailexpress.de">info@mailexpress.de</a></li>
+      <li style="color:rgba(255,255,255,.22);font-size:13px;margin-top:6px">HRB 23402 &middot; Amtsgericht Dresden</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 MAILEXPRESS Logistik GmbH &middot; HRB 23402 &middot; Amtsgericht Dresden &middot; USt-IdNr. DE 241 033 783</span>
+    <div style="display:flex;gap:20px">
+      <a onclick="toast('Impressum')">Impressum</a>
+      <a onclick="toast('Datenschutz')">Datenschutz</a>
+      <a onclick="toast('AGB')">AGB</a>
     </div>
   </div>
+</footer>
 
-  <div class="post-body">
-    <p>Wenn Sie heute gefragt werden, woher Ihre Aufträge kommen, ist die Antwort bei den meisten Immobilienmaklern dieselbe: Empfehlungen. Ehemalige Kunden, die weitererzählen. Ein Netzwerk aus Notaren, Steuerberatern, Bankberatern.</p>
-    <p>Das ist gut. Empfehlungen sind ein Zeichen von Qualität — und sie kosten kaum etwas. Das Problem ist nicht, dass Empfehlungen schlecht sind. Das Problem ist, wenn sie die <strong style="color: var(--text); font-weight: 600;">einzige</strong> Quelle sind.</p>
-
-    <div class="callout">Die unbequeme Wahrheit: Empfehlungen sind nicht planbar. Sie können sie nicht verdoppeln, indem Sie mehr arbeiten. Und wenn Ihr Netzwerk stagniert, stagnieren sie mit.</div>
-
-    <h2>Das Empfehlungs-Plateau</h2>
-    <p>Die meisten Makler kennen dieses Muster: In den ersten Jahren wächst das Geschäft schnell. Empfehlungen kommen rein, das Netzwerk baut sich auf. Dann — irgendwo zwischen Jahr drei und sieben — flacht es ab. Nicht weil die Arbeit schlechter wird, sondern weil jedes Netzwerk eine natürliche Sättigungsgrenze hat.</p>
-    <p>Das Ergebnis: Gute Monate folgen auf schlechte, ohne dass Sie verstehen warum. Ihr Unternehmen ist nicht steuerbar.</p>
-
-    <h2>Was Planbarkeit bedeutet</h2>
-    <p>Planbarkeit heißt nicht, dass jeden Monat exakt gleich viele Anfragen kommen. Es bedeutet, dass Sie einen Kanal haben, den Sie steuern können — den Sie aufdrehen, wenn Sie mehr Mandate brauchen, und drosseln, wenn Sie ausgelastet sind.</p>
-    <p>Ein funktionierendes digitales Akquise-System arbeitet so: Sie investieren ein definiertes Budget in gezielte Kampagnen. Diese erreichen Eigentümer in Ihrer Region — auch solche, die noch nicht aktiv nach einem Makler suchen. Die Eigentümer landen auf einer spezialisierten Seite, tragen ihre Daten ein, und die Anfrage landet bei Ihnen. Kein Zufall. Ein Prozess.</p>
-
-    <h3>Was das konkret bedeutet</h3>
-    <p>Bei einem monatlichen Werbebudget von 1.000 € in einer mittelgroßen deutschen Stadt: 10 bis 16 qualifizierte Anfragen pro Monat, zu Kosten von rund 65 bis 100 € pro Anfrage. Bei einer durchschnittlichen Provision von 15.000 € reicht eine Abschlussquote von 10 %, um den Kanal deutlich profitabel zu machen.</p>
-
-    <h2>Empfehlungen ersetzen? Nein — ergänzen.</h2>
-    <p>Die Frage lautet nicht: Empfehlungen oder digitale Akquise. Die Frage lautet: Was passiert, wenn Empfehlungen ausbleiben? Wer nur einen Kanal hat, ist fragil. Wer zwei hat, hat Stabilität.</p>
-
-    <div class="callout">Die Makler, die in drei Jahren noch stark am Markt sind, sind nicht unbedingt die mit dem besten Netzwerk. Es sind die mit dem besten System.</div>
-
-    <h2>Der erste Schritt</h2>
-    <p>Stellen Sie sich eine einfache Frage: Wenn Ihr stärkstes Empfehlungsnetzwerk heute aufhört, Sie weiterzuempfehlen — was passiert dann? Wenn die Antwort unangenehm ist, ist das der richtige Moment für einen zweiten Kanal.</p>
-    <p>Das muss nicht groß starten. Ein klares Fokusgebiet, eine definierte Zielgruppe, ein strukturiertes Angebot — und dann: messen, optimieren, skalieren. Wer heute anfängt, hat in 12 Monaten ein funktionierendes System.</p>
-
-    <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); display: flex; gap: 12px; flex-wrap: wrap;">
-      <button class="btn-primary" onclick="goContact()">Erstgespräch anfragen →</button>
-      <button class="btn-secondary" onclick="showPage('blog')">Zurück zum Blog</button>
-    </div>
-  </div>
-
-  <footer>
-    <div class="f-logo">MarketingGründer</div>
-    <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
-    <div class="f-copy">© 2025 marketing-gruender.de</div>
-  </footer>
-
-</div><!-- /post -->
-
-<script>
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-function goContact() {
-  showPage('home');
-  setTimeout(() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }), 120);
-}
-</script>
+<div class="toast" id="toast-el"></div>
+<script src="js/main.js"></script>
 </body>
 </html>
