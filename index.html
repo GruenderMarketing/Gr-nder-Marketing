@@ -59,14 +59,54 @@
           <div class="hs-item"><div class="hs-num">ab <em>6&euro;</em></div><div class="hs-label">Versand schon ab 6 Euro</div></div>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="hc-head">Alle Dienste auf einen Blick</div>
-        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">KF</div><div><div class="hc-name">Kurierfahrt</div><div class="hc-desc">Direkt, persoenlich begleitet &middot; ganz Europa</div></div><div class="hc-price">ab 8 &euro;</div></div>
-        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">SD</div><div><div class="hc-name">Sameday</div><div class="hc-desc">Heute raus, heute da &middot; EU-Ballungsraeume</div></div><div class="hc-price">ab 150 &euro;</div></div>
-        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">EX</div><div><div class="hc-name">Express Overnight</div><div class="hc-desc">Abholung bis 20 Uhr &middot; Zustellung ab 8 Uhr</div></div><div class="hc-price">ab 8 &euro;</div></div>
-        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">IN</div><div><div class="hc-name">International</div><div class="hc-desc">Weltweit &middot; Luft, Schiff, LKW &middot; bis 500 kg</div></div><div class="hc-price">ab 30 &euro;</div></div>
-        <div class="hc-row" onclick="go('leist')"><div class="hc-icon">PK</div><div><div class="hc-name">Paket</div><div class="hc-desc">1-3 Werktage &middot; bis 500 kg &middot; deutschlandweit</div></div><div class="hc-price">ab 6 &euro;</div></div>
-        <div class="hc-foot"><span class="hc-foot-text">Rahmenvertraege fuer Firmenkunden</span><a onclick="go('kontakt')">Anfrage &rarr;</a></div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="germany-map" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
+          <!-- Germany outline -->
+          <path class="geo-outline" d="M152,12 L215,20 L250,36 L282,72 L295,118 L296,158 L285,205 L272,245 L255,285 L232,312 L200,330 L165,335 L135,320 L108,298 L78,265 L55,232 L44,195 L44,168 L52,145 L68,118 L75,95 L92,68 L120,40 L148,20 Z"/>
+          <!-- Route network -->
+          <path class="route-seg" d="M132,72 C168,90 218,106 248,122 C260,140 265,158 268,172"/>
+          <path class="route-seg rt2" d="M268,172 C218,190 162,200 115,208 C94,196 74,182 62,162"/>
+          <path class="route-seg rt3" d="M268,172 C248,210 225,238 198,258 C194,282 192,304 192,325"/>
+          <path class="route-seg rt2" d="M115,208 C130,248 150,290 192,325" style="opacity:.5"/>
+          <!-- City markers -->
+          <circle cx="132" cy="72" r="4" class="cdot"/>
+          <circle cx="248" cy="122" r="4" class="cdot"/>
+          <circle cx="62" cy="162" r="3.5" class="cdot"/>
+          <circle cx="115" cy="208" r="4" class="cdot"/>
+          <circle cx="198" cy="258" r="3.5" class="cdot"/>
+          <circle cx="192" cy="325" r="4" class="cdot"/>
+          <!-- Dresden: home base with pulse -->
+          <circle cx="268" cy="172" r="8" class="home-pulse">
+            <animate attributeName="r" values="8;28" dur="2.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".6;0" dur="2.5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="268" cy="172" r="14" class="home-ring"/>
+          <circle cx="268" cy="172" r="6" class="home-dot"/>
+          <!-- City labels -->
+          <text x="122" y="65" class="clabel" text-anchor="end">Hamburg</text>
+          <text x="256" y="117" class="clabel">Berlin</text>
+          <text x="276" y="172" class="clabel clabel-home">Dresden</text>
+          <text x="53" y="158" class="clabel" text-anchor="end">Koeln</text>
+          <text x="107" y="204" class="clabel" text-anchor="end">Frankfurt</text>
+          <text x="192" y="342" class="clabel" text-anchor="middle">Muenchen</text>
+          <!-- Animated vehicles -->
+          <circle class="voh" r="5" opacity="0">
+            <animateMotion dur="5s" repeatCount="indefinite" begin="0s" path="M132,72 C168,90 218,106 248,122 C260,140 265,158 268,172"/>
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.07;.93;1" dur="5s" repeatCount="indefinite" begin="0s"/>
+          </circle>
+          <circle class="vbl" r="5" opacity="0">
+            <animateMotion dur="5.5s" repeatCount="indefinite" begin="1.5s" path="M268,172 C218,190 162,200 115,208 C94,196 74,182 62,162"/>
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.07;.93;1" dur="5.5s" repeatCount="indefinite" begin="1.5s"/>
+          </circle>
+          <circle class="voh" r="5" opacity="0">
+            <animateMotion dur="4.8s" repeatCount="indefinite" begin="2.8s" path="M268,172 C248,210 225,238 198,258 C194,282 192,304 192,325"/>
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.07;.93;1" dur="4.8s" repeatCount="indefinite" begin="2.8s"/>
+          </circle>
+          <circle class="vbl" r="4.5" opacity="0">
+            <animateMotion dur="6s" repeatCount="indefinite" begin="4s" path="M192,325 C160,296 138,256 115,208 C130,180 195,170 268,172"/>
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.07;.93;1" dur="6s" repeatCount="indefinite" begin="4s"/>
+          </circle>
+        </svg>
       </div>
     </div>
   </div>

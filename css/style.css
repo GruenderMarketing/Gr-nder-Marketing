@@ -61,7 +61,7 @@ section{padding:96px 0}
 .section-intro{margin-bottom:60px}
 
 /* HERO */
-.hero{padding-top:68px;min-height:100svh;display:flex;align-items:center;background:var(--b);position:relative;overflow:hidden}
+.hero{padding-top:68px;min-height:100svh;display:flex;align-items:center;background:linear-gradient(155deg,#071220 0%,#1a3d62 38%,#1F4E79 68%,#0d2542 100%);position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;right:0;top:0;bottom:0;width:45%;background:rgba(255,255,255,.03);clip-path:polygon(12% 0,100% 0,100% 100%,0% 100%)}
 .hero-texture{position:absolute;inset:0;background-image:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(255,255,255,.018) 40px,rgba(255,255,255,.018) 41px)}
 .hero-glow{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(244,122,32,.18) 0%,transparent 68%);pointer-events:none}
@@ -79,19 +79,23 @@ section{padding:96px 0}
 .hs-num em{font-style:normal;color:var(--o);font-size:28px}
 .hs-label{font-size:12.5px;color:rgba(255,255,255,.4);line-height:1.4}
 
-/* HERO CARD */
-.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--rxl);overflow:hidden;backdrop-filter:blur(20px)}
-.hc-head{padding:18px 24px;background:rgba(244,122,32,.14);border-bottom:1px solid rgba(255,255,255,.08);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.5)}
-.hc-row{display:flex;align-items:center;gap:14px;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer;transition:background .15s}
-.hc-row:last-child{border-bottom:none}
-.hc-row:hover{background:rgba(255,255,255,.05)}
-.hc-icon{width:40px;height:40px;border-radius:8px;flex-shrink:0;background:var(--bl);border:1px solid var(--bls);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;color:var(--b);letter-spacing:.5px}
-.hc-name{font-family:'Barlow Condensed',sans-serif;color:#fff;font-size:15px;font-weight:600;line-height:1}
-.hc-desc{font-size:12px;color:rgba(255,255,255,.38);margin-top:3px}
-.hc-price{margin-left:auto;flex-shrink:0;color:var(--o);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700}
-.hc-foot{padding:16px 22px;background:rgba(244,122,32,.08);border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}
-.hc-foot-text{font-size:13px;color:rgba(255,255,255,.5)}
-.hc-foot a{font-size:13px;font-weight:600;color:var(--o);cursor:pointer}
+/* HERO VISUAL */
+.hero-visual{display:flex;align-items:center;justify-content:center;animation:heroFloat 7s ease-in-out infinite}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.germany-map{width:100%;max-width:420px;height:auto;overflow:visible}
+.geo-outline{fill:rgba(255,255,255,.035);stroke:rgba(255,255,255,.14);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
+.route-seg{fill:none;stroke:rgba(244,122,32,.38);stroke-width:1.5;stroke-dasharray:6 9;stroke-linecap:round;animation:flowDash 3s linear infinite}
+.route-seg.rt2{stroke:rgba(58,174,224,.38);animation-duration:3.5s;animation-delay:-1s}
+.route-seg.rt3{animation-delay:-2s}
+@keyframes flowDash{to{stroke-dashoffset:-60}}
+.cdot{fill:rgba(255,255,255,.55);stroke:rgba(255,255,255,.15);stroke-width:1}
+.home-dot{fill:var(--o)}
+.home-ring{fill:none;stroke:rgba(244,122,32,.35);stroke-width:1.5}
+.home-pulse{fill:none;stroke:var(--o);stroke-width:1}
+.clabel{font-size:9px;fill:rgba(255,255,255,.45);font-family:'Source Sans 3',sans-serif;font-weight:500}
+.clabel-home{fill:rgba(244,122,32,.85);font-weight:600;font-size:10px}
+.voh{fill:var(--o);filter:drop-shadow(0 0 4px rgba(244,122,32,.9)) drop-shadow(0 0 8px rgba(244,122,32,.4))}
+.vbl{fill:#3AAEE0;filter:drop-shadow(0 0 4px rgba(58,174,224,.9)) drop-shadow(0 0 8px rgba(58,174,224,.4))}
 
 /* TRACK BAND */
 .track-band{background:var(--o);padding:0}
@@ -288,7 +292,7 @@ footer{background:var(--t1);padding:72px 0 0}
 /* RESPONSIVE */
 @media(max-width:1100px){
   .hero-inner{grid-template-columns:1fr;gap:52px}
-  .hero-card{display:none}
+  .hero-visual{display:none}
   .services-grid{grid-template-columns:1fr 1fr}
   .split,.split.rev{grid-template-columns:1fr;direction:ltr}
   .leist-item,.leist-item.rev{grid-template-columns:1fr;direction:ltr}
