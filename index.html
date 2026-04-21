@@ -69,92 +69,116 @@
             <filter id="cshadow" x="-20%" y="-25%" width="155%" height="180%">
               <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="rgba(0,0,0,0.22)"/>
             </filter>
-            <radialGradient id="deGrad" cx="76%" cy="40%" r="55%">
-              <stop offset="0%" stop-color="#2563A0" stop-opacity="0.45"/>
+            <radialGradient id="deGrad" cx="74%" cy="49%" r="52%">
+              <stop offset="0%" stop-color="#2563A0" stop-opacity="0.5"/>
               <stop offset="100%" stop-color="transparent"/>
             </radialGradient>
           </defs>
 
-          <!-- Atmospheric glow -->
-          <ellipse cx="355" cy="215" rx="200" ry="230" fill="url(#deGrad)"/>
+          <!-- Atmospheric glow around Dresden -->
+          <ellipse cx="339" cy="274" rx="185" ry="205" fill="url(#deGrad)"/>
 
-          <!-- Neighboring countries -->
-          <path class="geo-nb" d="M195,72 L178,72 L162,54 L168,36 L210,36 L228,54 L212,65 Z"/>
-          <path class="geo-nb" d="M390,108 L460,92 L460,300 L415,300 L395,285 L410,220 L410,175 Z"/>
-          <path class="geo-nb" d="M395,285 L415,300 L460,300 L460,408 L378,422 L335,375 L358,340 Z"/>
-          <path class="geo-nb" d="M318,415 L378,422 L460,408 L460,492 L215,492 L225,480 L262,475 L285,455 Z"/>
-          <path class="geo-nb" d="M148,455 L180,468 L225,480 L215,492 L135,492 L90,472 L110,430 Z"/>
-          <path class="geo-nb" d="M82,360 L95,395 L110,430 L90,472 L0,472 L0,295 L72,298 L78,330 Z"/>
-          <path class="geo-nb" d="M68,265 L72,298 L0,295 L0,235 L58,238 Z"/>
-          <path class="geo-nb" d="M68,265 L58,238 L0,235 L0,148 L102,148 L95,185 L78,220 Z"/>
+          <!-- Denmark -->
+          <path class="geo-nb" d="M178,64 L282,64 L294,80 L318,64 L308,36 L280,16 L246,6 L210,6 L176,20 L158,44 L168,64 Z"/>
+          <!-- Netherlands -->
+          <path class="geo-nb" d="M97,146 L89,158 L80,170 L72,182 L63,194 L57,206 L53,218 L51,232 L54,243 L57,252 L0,252 L0,130 L74,110 Z"/>
+          <!-- Belgium -->
+          <path class="geo-nb" d="M57,252 L63,265 L66,278 L69,290 L28,290 L0,265 L0,252 Z"/>
+          <!-- France -->
+          <path class="geo-nb" d="M69,290 L75,310 L80,322 L88,330 L94,338 L98,348 L94,368 L97,384 L100,400 L104,416 L108,436 L110,450 L114,460 L78,492 L0,492 L0,290 Z"/>
+          <!-- Switzerland -->
+          <path class="geo-nb" d="M114,460 L126,454 L140,458 L152,455 L166,456 L180,458 L194,464 L185,512 L154,536 L114,520 L94,494 Z"/>
+          <!-- Austria -->
+          <path class="geo-nb" d="M194,464 L210,465 L228,468 L244,470 L262,470 L280,472 L296,470 L308,464 L312,450 L382,502 L320,542 L200,542 L170,512 Z"/>
+          <!-- Czech Republic -->
+          <path class="geo-nb" d="M380,270 L376,292 L367,300 L356,307 L344,308 L332,307 L320,305 L312,294 L304,298 L300,320 L300,348 L304,382 L308,416 L312,450 L382,502 L460,502 L460,270 Z"/>
+          <!-- Poland -->
+          <path class="geo-nb" d="M360,124 L366,130 L372,144 L371,162 L370,180 L371,200 L373,222 L376,248 L380,270 L460,270 L460,102 L382,102 Z"/>
 
           <!-- Country labels -->
-          <text x="232" y="54" class="geo-ctry">DK</text>
-          <text x="438" y="195" class="geo-ctry">PL</text>
-          <text x="435" y="358" class="geo-ctry">CZ</text>
-          <text x="410" y="458" class="geo-ctry">AT</text>
-          <text x="156" y="490" class="geo-ctry">CH</text>
-          <text x="28" y="395" class="geo-ctry">FR</text>
-          <text x="14" y="268" class="geo-ctry">BE</text>
-          <text x="16" y="193" class="geo-ctry">NL</text>
+          <text x="224" y="42" class="geo-ctry" text-anchor="middle">DK</text>
+          <text x="418" y="192" class="geo-ctry" text-anchor="middle">PL</text>
+          <text x="426" y="374" class="geo-ctry" text-anchor="middle">CZ</text>
+          <text x="348" y="508" class="geo-ctry" text-anchor="middle">AT</text>
+          <text x="142" y="512" class="geo-ctry" text-anchor="middle">CH</text>
+          <text x="36" y="402" class="geo-ctry" text-anchor="middle">FR</text>
+          <text x="22" y="272" class="geo-ctry" text-anchor="middle">BE</text>
+          <text x="26" y="186" class="geo-ctry" text-anchor="middle">NL</text>
 
-          <!-- Germany -->
-          <path class="geo-de" d="M195,72 L265,65 L330,75 L390,108 L410,175 L410,220 L395,285 L358,340 L335,375 L318,415 L285,455 L262,475 L225,480 L180,468 L148,455 L110,430 L95,395 L82,360 L78,330 L72,298 L68,265 L78,220 L95,185 L118,148 L155,108 L185,82 Z"/>
+          <!-- Germany — accurate geographic outline, clockwise from Emden -->
+          <path class="geo-de" d="
+            M 97,146
+            L 110,143 L 122,142 L 128,132
+            L 130,142 L 134,150 L 140,155 L 147,148 L 150,140
+            L 155,120 L 162,108 L 170,98 L 174,84 L 178,72 L 180,64
+            L 196,62 L 218,62 L 240,62 L 262,62 L 282,64
+            L 288,72 L 298,80 L 310,86 L 320,92 L 326,95 L 336,100 L 344,108 L 354,116 L 360,124
+            L 366,130 L 372,144 L 371,162 L 370,180 L 371,200 L 373,222 L 376,248 L 380,270
+            L 376,292 L 367,300 L 356,307 L 344,308 L 332,307 L 320,305 L 312,294
+            L 304,298 L 300,320 L 300,348 L 304,382 L 308,416 L 312,450
+            L 308,464 L 296,470 L 280,472 L 262,470 L 244,470 L 228,468 L 210,465 L 194,464
+            L 180,458 L 166,456 L 152,455 L 140,458 L 126,454 L 114,460
+            L 110,450 L 108,436 L 104,416 L 100,400 L 97,384
+            L 94,368 L 98,348 L 94,338 L 88,330 L 80,322 L 75,310
+            L 72,300 L 69,290
+            L 66,278 L 63,265 L 57,252
+            L 54,243 L 51,232 L 53,218 L 57,206 L 63,194 L 72,182 L 80,170 L 89,158 L 97,150 Z
+          "/>
 
-          <!-- Routes from Dresden (370,228) -->
-          <path class="geo-rt" d="M370,228 C362,197 355,180 345,162 C302,142 242,128 175,115"/>
-          <path class="geo-rt geo-rt2" d="M370,228 C305,258 220,272 155,280 C128,264 108,250 88,232"/>
-          <path class="geo-rt geo-rt3" d="M370,228 C342,288 308,318 268,344 C264,390 263,415 262,440"/>
-          <path class="geo-rt geo-rt4" d="M370,228 C385,278 372,346 338,378"/>
+          <!-- Routes from Dresden (339,274) — orange = outgoing, blue = incoming -->
+          <path class="geo-rt"          d="M339,274 C310,230 260,182 202,134"/>
+          <path class="geo-rt geo-rt2"  d="M88,286 C190,282 270,276 339,274"/>
+          <path class="geo-rt geo-rt3"  d="M339,274 C315,340 290,394 261,442"/>
+          <path class="geo-rt geo-rt4"  d="M328,196 C334,222 336,250 339,274"/>
 
           <!-- City dots -->
-          <circle cx="175" cy="115" r="5" class="geo-cdot"/>
-          <circle cx="345" cy="162" r="5" class="geo-cdot"/>
-          <circle cx="88" cy="232" r="4.5" class="geo-cdot"/>
-          <circle cx="155" cy="280" r="4.5" class="geo-cdot"/>
-          <circle cx="268" cy="344" r="4" class="geo-cdot"/>
-          <circle cx="262" cy="440" r="5" class="geo-cdot"/>
+          <circle cx="202" cy="134" r="5"   class="geo-cdot"/>
+          <circle cx="328" cy="196" r="5"   class="geo-cdot"/>
+          <circle cx="88"  cy="286" r="4.5" class="geo-cdot"/>
+          <circle cx="155" cy="330" r="4.5" class="geo-cdot"/>
+          <circle cx="261" cy="442" r="5"   class="geo-cdot"/>
+          <circle cx="243" cy="364" r="4"   class="geo-cdot"/>
 
           <!-- Dresden home base -->
-          <circle cx="370" cy="228" r="12" class="geo-hp">
-            <animate attributeName="r" values="12;40" dur="2.8s" repeatCount="indefinite"/>
+          <circle cx="339" cy="274" r="16" class="geo-hp">
+            <animate attributeName="r" values="16;46" dur="2.8s" repeatCount="indefinite"/>
             <animate attributeName="opacity" values="0.7;0" dur="2.8s" repeatCount="indefinite"/>
           </circle>
-          <circle cx="370" cy="228" r="24" class="geo-hr"/>
-          <circle cx="370" cy="228" r="11" class="geo-hd"/>
+          <circle cx="339" cy="274" r="27" class="geo-hr"/>
+          <circle cx="339" cy="274" r="11" class="geo-hd"/>
 
           <!-- City labels -->
-          <text x="163" y="108" class="geo-cl" text-anchor="end">Hamburg</text>
-          <text x="353" y="156" class="geo-cl">Berlin</text>
-          <text x="384" y="229" class="geo-cl geo-cl-home">Dresden</text>
-          <text x="76" y="226" class="geo-cl" text-anchor="end">Köln</text>
-          <text x="143" y="274" class="geo-cl" text-anchor="end">Frankfurt</text>
-          <text x="262" y="458" class="geo-cl" text-anchor="middle">München</text>
+          <text x="190" y="127" class="geo-cl" text-anchor="end">Hamburg</text>
+          <text x="316" y="189" class="geo-cl" text-anchor="end">Berlin</text>
+          <text x="353" y="270" class="geo-cl geo-cl-home">Dresden</text>
+          <text x="76"  y="280" class="geo-cl" text-anchor="end">Köln</text>
+          <text x="143" y="324" class="geo-cl" text-anchor="end">Frankfurt</text>
+          <text x="261" y="458" class="geo-cl" text-anchor="middle">München</text>
 
           <!-- Animated vehicles -->
           <circle class="geo-vo" r="7" opacity="0">
             <animateMotion dur="5s" repeatCount="indefinite" begin="0s"
-              path="M370,228 C362,197 355,180 345,162 C302,142 242,128 175,115"/>
+              path="M339,274 C310,230 260,182 202,134"/>
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.06;.94;1" dur="5s" repeatCount="indefinite" begin="0s"/>
           </circle>
           <circle class="geo-vb" r="6.5" opacity="0">
             <animateMotion dur="5.5s" repeatCount="indefinite" begin="1.5s"
-              path="M88,232 C108,250 128,264 155,280 C220,272 305,258 370,228"/>
+              path="M88,286 C190,282 270,276 339,274"/>
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.06;.94;1" dur="5.5s" repeatCount="indefinite" begin="1.5s"/>
           </circle>
           <circle class="geo-vo" r="7" opacity="0">
             <animateMotion dur="4.8s" repeatCount="indefinite" begin="2.8s"
-              path="M370,228 C342,288 308,318 268,344 C264,390 263,415 262,440"/>
+              path="M339,274 C315,340 290,394 261,442"/>
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.06;.94;1" dur="4.8s" repeatCount="indefinite" begin="2.8s"/>
           </circle>
           <circle class="geo-vb" r="6" opacity="0">
             <animateMotion dur="4s" repeatCount="indefinite" begin="4.2s"
-              path="M345,162 C360,190 366,210 370,228"/>
+              path="M328,196 C334,222 336,250 339,274"/>
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.06;.94;1" dur="4s" repeatCount="indefinite" begin="4.2s"/>
           </circle>
 
           <!-- Popup: Hamburg -->
-          <g style="transform:translate(28px,60px)">
+          <g style="transform:translate(20px,76px)">
             <g class="geo-pop">
               <rect width="178" height="54" rx="10" fill="rgba(255,255,255,.97)" filter="url(#cshadow)"/>
               <rect width="4" height="54" rx="2" fill="#F47A20"/>
@@ -170,7 +194,7 @@
           </g>
 
           <!-- Popup: Berlin -->
-          <g style="transform:translate(242px,110px)">
+          <g style="transform:translate(194px,128px)">
             <g class="geo-pop geo-pop2">
               <rect width="168" height="54" rx="10" fill="rgba(255,255,255,.97)" filter="url(#cshadow)"/>
               <rect width="4" height="54" rx="2" fill="#3AAEE0"/>
@@ -183,7 +207,7 @@
           </g>
 
           <!-- Popup: München -->
-          <g style="transform:translate(105px,452px)">
+          <g style="transform:translate(112px,394px)">
             <g class="geo-pop geo-pop3">
               <rect width="174" height="54" rx="10" fill="rgba(255,255,255,.97)" filter="url(#cshadow)"/>
               <rect width="4" height="54" rx="2" fill="#F47A20"/>
