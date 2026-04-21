@@ -32,7 +32,7 @@ function doTrack(id) {
 
 /* ─── Galerie Placeholder ────────────────────────────────── */
 function gTap(label) {
-  toast('Foto: ' + label + ' – hier dein echtes Foto einfuegen');
+  toast('Foto: ' + label + ' – hier dein echtes Foto einfügen');
 }
 
 /* ─── Google Reviews Slider ──────────────────────────────── */
