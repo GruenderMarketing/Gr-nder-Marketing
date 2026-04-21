@@ -82,20 +82,29 @@ section{padding:96px 0}
 /* HERO VISUAL */
 .hero-visual{display:flex;align-items:center;justify-content:center;animation:heroFloat 7s ease-in-out infinite}
 @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.germany-map{width:100%;max-width:420px;height:auto;overflow:visible}
-.geo-outline{fill:rgba(255,255,255,.035);stroke:rgba(255,255,255,.14);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
-.route-seg{fill:none;stroke:rgba(244,122,32,.38);stroke-width:1.5;stroke-dasharray:6 9;stroke-linecap:round;animation:flowDash 3s linear infinite}
-.route-seg.rt2{stroke:rgba(58,174,224,.38);animation-duration:3.5s;animation-delay:-1s}
-.route-seg.rt3{animation-delay:-2s}
-@keyframes flowDash{to{stroke-dashoffset:-60}}
-.cdot{fill:rgba(255,255,255,.55);stroke:rgba(255,255,255,.15);stroke-width:1}
-.home-dot{fill:var(--o)}
-.home-ring{fill:none;stroke:rgba(244,122,32,.35);stroke-width:1.5}
-.home-pulse{fill:none;stroke:var(--o);stroke-width:1}
-.clabel{font-size:9px;fill:rgba(255,255,255,.45);font-family:'Source Sans 3',sans-serif;font-weight:500}
-.clabel-home{fill:rgba(244,122,32,.85);font-weight:600;font-size:10px}
-.voh{fill:var(--o);filter:drop-shadow(0 0 4px rgba(244,122,32,.9)) drop-shadow(0 0 8px rgba(244,122,32,.4))}
-.vbl{fill:#3AAEE0;filter:drop-shadow(0 0 4px rgba(58,174,224,.9)) drop-shadow(0 0 8px rgba(58,174,224,.4))}
+.germany-map{width:100%;height:auto;overflow:visible}
+.geo-nb{fill:rgba(255,255,255,.04);stroke:rgba(255,255,255,.09);stroke-width:1;stroke-linejoin:round}
+.geo-ctry{font-size:9px;fill:rgba(255,255,255,.22);font-family:'Source Sans 3',sans-serif;font-weight:700;letter-spacing:1px}
+.geo-de{fill:rgba(37,99,160,.2);stroke:rgba(255,255,255,.65);stroke-width:2;stroke-linejoin:round;filter:drop-shadow(0 0 14px rgba(37,99,160,.55))}
+.geo-rt{fill:none;stroke:rgba(244,122,32,.55);stroke-width:2;stroke-dasharray:8 12;stroke-linecap:round;animation:geoFlow 2s linear infinite}
+.geo-rt2{stroke:rgba(58,174,224,.55);animation-duration:2.3s;animation-delay:-.8s}
+.geo-rt3{animation-delay:-1.5s}
+.geo-rt4{stroke:rgba(58,174,224,.4);animation-duration:2.6s;animation-delay:-.3s;opacity:.7}
+@keyframes geoFlow{to{stroke-dashoffset:-80}}
+.geo-cdot{fill:rgba(255,255,255,.72);stroke:rgba(255,255,255,.3);stroke-width:1.5;filter:drop-shadow(0 0 5px rgba(255,255,255,.5))}
+.geo-hd{fill:var(--o);filter:drop-shadow(0 0 8px rgba(244,122,32,1)) drop-shadow(0 0 16px rgba(244,122,32,.6))}
+.geo-hr{fill:none;stroke:rgba(244,122,32,.45);stroke-width:2}
+.geo-hp{fill:none;stroke:var(--o);stroke-width:1.5}
+.geo-cl{font-size:9.5px;fill:rgba(255,255,255,.58);font-family:'Source Sans 3',sans-serif;font-weight:600}
+.geo-cl-home{fill:rgba(244,122,32,.92);font-size:10.5px}
+.geo-vo{fill:var(--o);filter:drop-shadow(0 0 6px rgba(244,122,32,1)) drop-shadow(0 0 14px rgba(244,122,32,.6))}
+.geo-vb{fill:#3AAEE0;filter:drop-shadow(0 0 6px rgba(58,174,224,1)) drop-shadow(0 0 14px rgba(58,174,224,.6))}
+.geo-pop{animation:geoPop 9s ease-in-out infinite}
+.geo-pop2{animation-delay:3s}
+.geo-pop3{animation-delay:6s}
+@keyframes geoPop{0%,4%{opacity:0;transform:translateY(8px)}14%,73%{opacity:1;transform:translateY(0)}85%,100%{opacity:0;transform:translateY(-5px)}}
+.geo-pop-t{font-size:10px;font-weight:700;fill:#0D1B2A;font-family:'Barlow Condensed',sans-serif;letter-spacing:.3px}
+.geo-pop-s{font-size:8.5px;fill:#7A90A4;font-family:'Source Sans 3',sans-serif}
 
 /* TRACK BAND */
 .track-band{background:var(--o);padding:0}
