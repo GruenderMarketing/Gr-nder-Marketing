@@ -117,6 +117,25 @@ section{padding:96px 0}
 .track-phone{font-size:13.5px;color:rgba(255,255,255,.75);white-space:nowrap;margin-left:auto}
 .track-phone a{color:#fff;font-weight:600}
 
+/* ADVANTAGES */
+.adv-section{padding:80px 0;background:var(--off)}
+.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.adv-card{background:#fff;border-radius:14px;padding:30px 26px;box-shadow:0 2px 18px rgba(0,0,0,.06);transition:transform .22s,box-shadow .22s;position:relative;overflow:hidden;border:1.5px solid var(--bd)}
+.adv-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--o),#ffb060);opacity:0;transition:opacity .22s}
+.adv-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(0,0,0,.10)}
+.adv-card:hover::after{opacity:1}
+.adv-card.adv-blue::after{background:linear-gradient(90deg,var(--b),var(--bm))}
+.adv-icon{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;flex-shrink:0}
+.adv-icon-o{background:rgba(244,122,32,.11)}
+.adv-icon-o svg{stroke:#F47A20}
+.adv-icon-b{background:rgba(31,78,121,.09)}
+.adv-icon-b svg{stroke:var(--b)}
+.adv-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:var(--t1);margin-bottom:10px;line-height:1.2}
+.adv-text{font-size:14px;color:var(--t2);line-height:1.72;margin:0}
+.adv-stat{margin-top:18px;padding-top:15px;border-top:1px solid var(--bd);font-size:12.5px;color:var(--t3)}
+.adv-stat strong{color:var(--o);font-weight:700}
+.adv-blue .adv-stat strong{color:var(--b)}
+
 /* SERVICES */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .svc{border:1.5px solid var(--bd);border-radius:var(--rl);padding:30px;background:var(--w);transition:all .22s;cursor:pointer;position:relative;overflow:hidden}
@@ -303,6 +322,7 @@ footer{background:var(--t1);padding:72px 0 0}
   .hero-inner{grid-template-columns:1fr;gap:52px}
   .hero-visual{display:none}
   .services-grid{grid-template-columns:1fr 1fr}
+  .adv-grid{grid-template-columns:1fr 1fr}
   .split,.split.rev{grid-template-columns:1fr;direction:ltr}
   .leist-item,.leist-item.rev{grid-template-columns:1fr;direction:ltr}
   .contact-grid{grid-template-columns:1fr}
@@ -314,6 +334,7 @@ footer{background:var(--t1);padding:72px 0 0}
 @media(max-width:860px){
   .nav-cta .btn-outline{display:none}
   .services-grid{grid-template-columns:1fr}
+  .adv-grid{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr 1fr;gap:32px}
   .process-grid::after{display:none}
   .ps-circle{box-shadow:none}
