@@ -34,18 +34,18 @@
       <a class="btn btn-outline" onclick="go('kontakt')">Sendungsverfolgung</a>
       <a class="btn btn-primary" onclick="go('kontakt')">Auftrag erteilen</a>
     </div>
+    <!-- Mobile: phone icon + Kontakt always visible, burger toggles menu -->
+    <div class="nav-mobile-cta">
+      <a class="nav-icon-btn" href="tel:+493514383482" aria-label="Anrufen">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.81 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.9z"/></svg>
+      </a>
+      <a class="btn btn-dark nav-kontakt-btn" onclick="go('kontakt')">Kontakt</a>
+    </div>
     <button class="nav-burger" id="nav-burger" onclick="toggleMobileMenu()" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    <div class="mobile-menu-actions">
-      <a class="btn btn-primary mobile-menu-btn" href="tel:+493514383482">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.81 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.9z"/></svg>
-        Anrufen
-      </a>
-      <a class="btn btn-dark mobile-menu-btn" onclick="go('kontakt')">Kontakt</a>
-    </div>
     <ul class="mobile-nav-links">
       <li><a data-p="home"    onclick="go('home')">Start</a></li>
       <li><a data-p="leist"   onclick="go('leist')">Leistungen</a></li>
@@ -53,6 +53,12 @@
       <li><a data-p="blog"    onclick="go('blog')">Blog</a></li>
       <li><a data-p="kontakt" onclick="go('kontakt')">Kontakt</a></li>
     </ul>
+    <div class="mobile-menu-bottom">
+      <a class="btn btn-primary mobile-cta-full" href="tel:+493514383482">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.81 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.9z"/></svg>
+        Jetzt anrufen
+      </a>
+    </div>
   </div>
 </nav>
 
