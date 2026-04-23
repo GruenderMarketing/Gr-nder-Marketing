@@ -363,6 +363,7 @@ footer{background:var(--t1);padding:72px 0 0}
   .stat-item{border-bottom:1px solid rgba(255,255,255,.08)}
 }
 @media(max-width:860px){
+  .nav-wrap{padding:0 20px;gap:8px}
   .nav-links,.nav-cta{display:none}
   .nav-mobile-cta{display:flex}
   .nav-burger{display:flex}
@@ -378,7 +379,8 @@ footer{background:var(--t1);padding:72px 0 0}
   .review-card{flex:0 0 100%;min-width:100%}
 }
 @media(max-width:640px){
-  .nav-wrap{padding:0 16px;gap:8px}
+  .nav-wrap{padding:0 16px;gap:6px}
+  .logo svg{height:34px}
   .wrap,.page-hero-inner,.footer-grid,.footer-bottom{padding-left:20px;padding-right:20px}
   section{padding:64px 0}
   .footer-grid{grid-template-columns:1fr}
