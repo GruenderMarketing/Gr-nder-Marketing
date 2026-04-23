@@ -57,15 +57,34 @@ function gTap(label) {
 
 /* ─── Google Reviews Slider ──────────────────────────────── */
 var reviewIdx = 0;
-var REVIEW_MAX = 2;
+
+function getReviewMax() {
+  var total = document.querySelectorAll('#reviews-track .review-card').length;
+  if (!total) return 0;
+  var visible = window.innerWidth <= 860 ? 1 : 3;
+  return Math.max(0, total - visible);
+}
+
+function rebuildReviewDots() {
+  var el = document.getElementById('review-dots');
+  if (!el) return;
+  var max = getReviewMax();
+  el.innerHTML = '';
+  for (var i = 0; i <= max; i++) {
+    var d = document.createElement('div');
+    d.className = 'slider-dot' + (i === reviewIdx ? ' active' : '');
+    d.onclick = (function(n) { return function() { goToReview(n); }; })(i);
+    el.appendChild(d);
+  }
+}
 
 function slideReviews(dir) {
-  reviewIdx = Math.max(0, Math.min(REVIEW_MAX, reviewIdx + dir));
+  reviewIdx = Math.max(0, Math.min(getReviewMax(), reviewIdx + dir));
   updateReviewSlider();
 }
 
 function goToReview(idx) {
-  reviewIdx = Math.max(0, Math.min(REVIEW_MAX, idx));
+  reviewIdx = Math.max(0, Math.min(getReviewMax(), idx));
   updateReviewSlider();
 }
 
@@ -75,13 +94,14 @@ function updateReviewSlider() {
   var gap = 20;
   var cardW = track.children[0].getBoundingClientRect().width + gap;
   track.style.transform = 'translateX(-' + (reviewIdx * cardW) + 'px)';
-  document.querySelectorAll('.slider-dot').forEach(function(d, i) {
+  document.querySelectorAll('#review-dots .slider-dot').forEach(function(d, i) {
     d.classList.toggle('active', i === reviewIdx);
   });
 }
 
 window.addEventListener('resize', function() {
   reviewIdx = 0;
+  rebuildReviewDots();
   updateReviewSlider();
 }, { passive: true });
 
@@ -93,3 +113,4 @@ window.addEventListener('scroll', function() {
 
 /* ─── Init ───────────────────────────────────────────────── */
 go('home');
+rebuildReviewDots();
