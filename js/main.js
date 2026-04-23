@@ -10,6 +10,26 @@ function go(id) {
     a.classList.toggle('cur', a.dataset.p === id);
   });
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  closeMobileMenu();
+}
+
+/* ─── Mobile Menu ─────────────────────────────────────────── */
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  var burger = document.getElementById('nav-burger');
+  if (!menu || !burger) return;
+  var isOpen = menu.classList.toggle('open');
+  burger.classList.toggle('open', isOpen);
+  burger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+}
+
+function closeMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  var burger = document.getElementById('nav-burger');
+  if (!menu || !burger) return;
+  menu.classList.remove('open');
+  burger.classList.remove('open');
+  burger.setAttribute('aria-label', 'Menü öffnen');
 }
 
 /* ─── Toast ──────────────────────────────────────────────── */
